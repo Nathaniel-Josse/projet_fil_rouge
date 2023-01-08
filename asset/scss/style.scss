@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    nav{
+        ul{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            li{
+                &::after{
+                    content:" - ";
+                }
+                &::before{
+                    content: " - ";
+                }
+            }
+        }
+    }
+}
+.container1{
+    background: rgb(198, 198, 198);
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    .imgProfil {
+        object-fit: cover;
+        border-radius: 50%;
+        height: 250px;
+        width: 250px;
+        margin: 5px;
+    }
+    p{
+        text-align: right;
+        margin: 5px;
+    }
+}
+#carouselExampleIndicators{
+    width:300px;
+    height:300px;
+}
