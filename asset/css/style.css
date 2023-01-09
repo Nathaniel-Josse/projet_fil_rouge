@@ -9,6 +9,7 @@
 header {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 header nav ul {
   display: flex;
@@ -39,4 +40,9 @@ header nav ul li::before {
 .container1 p {
   text-align: right;
   margin: 5px;
+}
+
+#carouselExampleIndicators {
+  width: 300px;
+  height: 300px;
 }

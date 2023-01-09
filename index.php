@@ -10,7 +10,7 @@
 <body>
     <div class="containerStart">
         <header>
-            <p>Logo</p>
+            <img src="asset/img/logotype_nathaniel_test.png" alt="logo" class="logo">
             <nav>
                 <ul>
                     <li>Accueil</li>
