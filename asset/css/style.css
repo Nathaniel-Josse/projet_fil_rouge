@@ -11,16 +11,24 @@ header {
   justify-content: space-around;
   align-items: center;
 }
-header nav ul {
+header nav {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+}
+header nav ul {
   list-style: none;
 }
-header nav ul li::after {
-  content: "  ";
+header nav ul li a:link, header nav ul li a:visited {
+  color: #00a29b;
+  text-decoration: none;
 }
-header nav ul li::before {
-  content: "  ";
+header nav ul li a:hover {
+  color: #00746b;
+  text-decoration: none;
+}
+header nav ul li a:active {
+  color: #00a29b;
+  text-decoration: none;
 }
 
 .container1 {

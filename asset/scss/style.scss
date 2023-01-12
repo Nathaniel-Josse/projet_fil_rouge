@@ -5,21 +5,31 @@
     margin:0;
     box-sizing: border-box;
 }
+$link-color: #00a29b;
+$link-hover-color: #00746b;
 header{
     display: flex;
     justify-content: space-around;
     align-items: center;
     nav{
+        display: flex;
+        justify-content: space-between;
         ul{
-            display: flex;
-            flex-direction: row;
             list-style: none;
             li{
-                &::after{
-                    content:"  ";
-                }
-                &::before{
-                    content: "  ";
+                a{
+                    &:link, &:visited{
+                        color: #00a29b;
+                        text-decoration: none;
+                    }
+                    &:hover{
+                        color: #00746b;
+                        text-decoration: none;
+                    }
+                    &:active{  
+                        color: #00a29b;       
+                        text-decoration: none;
+                    }
                 }
             }
         }
