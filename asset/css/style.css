@@ -18,6 +18,10 @@ header nav {
 header nav ul {
   list-style: none;
 }
+header nav ul li {
+  display: inline-block;
+  margin: 0 10px 0 10px;
+}
 header nav ul li a:link, header nav ul li a:visited {
   color: #00a29b;
   text-decoration: none;

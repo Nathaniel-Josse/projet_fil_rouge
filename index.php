@@ -12,6 +12,19 @@
     <link rel="manifest" href="asset/img/site.webmanifest">
 </head>
 <body>
+    <?php
+    $pdo = new PDO("mysql:host=localhost;dbname=projet_fil_rouge", "root", "", [PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT]);
+    $request = $pdo->prepare("SELECT content FROM text_content");
+    $request->execute();
+    $result = $request->fetchAll(PDO::FETCH_ASSOC);
+    /* foreach ($result[0] as $key => $value) {
+        echo $key . "=>" . $value . "<br>";
+    }
+    foreach ($result[1] as $key => $value) {
+        echo $key . "=>" . $value . "<br>";
+    } */
+
+    ?>
     <div class="containerStart">
         <header>
             <img src="asset/img/logotype_nathaniel_test.png" alt="logo" class="logo">
@@ -25,8 +38,9 @@
         </header>
         <div class="container1">
             <img src="asset/img/n_josse.jpg" alt="photographie de Nathaniel Josse" class="imgProfil">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quisquam temporibus aut aspernatur excepturi iure enim illum, veritatis fugit nihil! Quibusdam voluptate reiciendis voluptatem tenetur sunt, iure vel explicabo ducimus.
-            Autem maxime quis hic impedit labore libero, aliquid ullam? Praesentium ex nobis perferendis repellat animi aperiam officiis, asperiores quisquam consectetur, corporis a cumque quo corrupti voluptates laudantium, ab distinctio necessitatibus.<p>
+            <p><?php foreach ($result[0] as $key => $value) {
+                    echo $value;
+                    }?><p>
         </div>
 
         <div id="carouselExampleIndicators" class="carousel slide m-3" data-bs-ride="carousel">

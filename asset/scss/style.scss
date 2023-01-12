@@ -17,6 +17,8 @@ header{
         ul{
             list-style: none;
             li{
+                display:inline-block; // Tentative navbar horizontale
+                margin: 0 10px 0 10px; // Tentative navbar horizontale
                 a{
                     &:link, &:visited{
                         color: #00a29b;
