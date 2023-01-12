@@ -13,10 +13,9 @@
             <img src="asset/img/logotype_nathaniel_test.png" alt="logo" class="logo">
             <nav>
                 <ul>
-                    <li>Accueil</li>
-                    <li>Présentation</li>
-                    <li>Réalisations</li>
-                    <li>Contact</li>
+                    <li><a href="#" title="Accueil">Accueil</a></li>
+                    <li><a href="#" title="Realisations">Réalisations</a></li>
+                    <li><a href="#" title="Contact">Contact</a></li>
                 </ul>
             </nav>
         </header>

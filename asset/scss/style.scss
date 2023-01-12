@@ -16,10 +16,10 @@ header{
             list-style: none;
             li{
                 &::after{
-                    content:" - ";
+                    content:"  ";
                 }
                 &::before{
-                    content: " - ";
+                    content: "  ";
                 }
             }
         }

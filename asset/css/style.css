@@ -17,10 +17,10 @@ header nav ul {
   list-style: none;
 }
 header nav ul li::after {
-  content: " - ";
+  content: "  ";
 }
 header nav ul li::before {
-  content: " - ";
+  content: "  ";
 }
 
 .container1 {
