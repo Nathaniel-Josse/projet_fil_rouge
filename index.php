@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="asset/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="asset/img/favicon-16x16.png">
     <link rel="manifest" href="asset/img/site.webmanifest">
+    <meta name="author" content="Nathaniel">
 </head>
 <body>
     <?php
@@ -32,9 +33,9 @@
             <img src="asset/img/logotype_nathaniel_test.png" alt="logo" class="logo">
             <nav>
                 <ul>
-                    <li><a href="#" title="accueil">Accueil</a></li>
+                    <li><a href="/index.php" title="accueil">Accueil</a></li>
                     <li><a href="#" title="realisations">Réalisations</a></li>
-                    <li><a href="#" title="contact">Contact</a></li>
+                    <li><a href="pages/contact.php" title="contact">Contact</a></li>
                 </ul>
             </nav>
         </header>

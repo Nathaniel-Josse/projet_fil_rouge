@@ -58,3 +58,17 @@ header nav ul li a:active {
   width: 300px;
   height: 300px;
 }
+
+.formContainer {
+  margin: auto;
+}
+
+.successMessage {
+  margin: auto;
+  background-color: rgba(176, 255, 176, 0.5);
+}
+
+.errorMessage {
+  margin: auto;
+  background-color: rgba(255, 176, 176, 0.5);
+}

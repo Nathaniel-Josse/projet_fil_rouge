@@ -58,3 +58,20 @@ header{
     width:300px;
     height:300px;
 }
+
+// contact.php
+
+.formContainer{
+    margin:auto;
+}
+
+// TraitementBdd.php
+
+.successMessage{
+    margin:auto;
+    background-color: rgba(176, 255, 176, 0.5);
+}
+.errorMessage{
+    margin:auto;
+    background-color: rgba(255, 176, 176, 0.5);
+}
