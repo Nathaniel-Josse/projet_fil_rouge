@@ -13,6 +13,8 @@
 </head>
 <body>
     <?php
+    require_once "include/AffichageBdd.php";
+    
     $pdo = new PDO("mysql:host=localhost;dbname=projet_fil_rouge", "root", "", [PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT]);
     $request = $pdo->prepare("SELECT content FROM text_content");
     $request->execute();
@@ -38,9 +40,7 @@
         </header>
         <div class="container1">
             <img src="asset/img/n_josse.jpg" alt="photographie de Nathaniel Josse" class="imgProfil">
-            <p><?php foreach ($result[0] as $key => $value) {
-                    echo $value;
-                    }?><p>
+            <p><?php AffichageBdd::affichage($result, 0);?><p>
         </div>
 
         <div id="carouselExampleIndicators" class="carousel slide m-3" data-bs-ride="carousel">
