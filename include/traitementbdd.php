@@ -36,7 +36,7 @@ if($_POST && $_POST["objet"] && $_POST["message"]){
         echo "<div class='successMessage'>Merci pour votre message, il a bien été transmis.</div>";
         exit;
     } else {
-        echo "<div class='errorMessage'>Erreur SQL lors de l'insertion, veuillez réessayer.</div>";
+        echo "<div class='errorMessage'>Erreur lors de l'envoi du message, veuillez réessayer.</div>";
     }
 }
 ?>

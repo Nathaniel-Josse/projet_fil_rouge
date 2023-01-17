@@ -28,12 +28,16 @@
     } */
 
     ?>
+    <video width="1920" height="1080" id="introLooped"  onclick="changeToEndIntro()" autoplay muted loop>
+        <source src="asset/medias/logo_animation_loop.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la balise video.
+    </video>
     <div class="containerStart">
         <header>
             <img src="asset/img/logotype_nathaniel_test.png" alt="logo" class="logo">
             <nav>
                 <ul>
-                    <li><a href="/index.php" title="accueil">Accueil</a></li>
+                    <li><a href="index.php" title="accueil">Accueil</a></li>
                     <li><a href="#" title="realisations">Réalisations</a></li>
                     <li><a href="pages/contact.php" title="contact">Contact</a></li>
                 </ul>
@@ -80,4 +84,8 @@
     </div>
 
 </body>
+
+<footer>
+    <script src="asset/js/script.js"></script>
+</footer>
 </html>

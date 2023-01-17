@@ -6,42 +6,52 @@
   box-sizing: border-box;
 }
 
-header {
+#introLooped {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.containerStart {
+  display: hidden;
+}
+.containerStart header {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-header nav {
+.containerStart header nav {
   display: flex;
   justify-content: space-between;
 }
-header nav ul {
+.containerStart header nav ul {
   list-style: none;
 }
-header nav ul li {
+.containerStart header nav ul li {
   display: inline-block;
   margin: 0 10px 0 10px;
 }
-header nav ul li a:link, header nav ul li a:visited {
+.containerStart header nav ul li a:link, .containerStart header nav ul li a:visited {
   color: #00a29b;
   text-decoration: none;
 }
-header nav ul li a:hover {
+.containerStart header nav ul li a:hover {
   color: #00746b;
   text-decoration: none;
 }
-header nav ul li a:active {
+.containerStart header nav ul li a:active {
   color: #00a29b;
   text-decoration: none;
 }
-
-.container1 {
+.containerStart .container1 {
   background: rgb(198, 198, 198);
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.container1 .imgProfil {
+.containerStart .container1 .imgProfil {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
@@ -49,12 +59,11 @@ header nav ul li a:active {
   width: 250px;
   margin: 5px;
 }
-.container1 p {
+.containerStart .container1 p {
   text-align: right;
   margin: 5px;
 }
-
-#carouselExampleIndicators {
+.containerStart #carouselExampleIndicators {
   width: 300px;
   height: 300px;
 }
