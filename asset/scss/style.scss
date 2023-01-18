@@ -5,17 +5,16 @@
     margin:0;
     box-sizing: border-box;
 }
-#introLooped {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+.containerVideo {
+    display: flex;
+    justify-content: center;
+}
+.hidden{
+    opacity: 0;
 }
 $link-color: #00a29b;
 $link-hover-color: #00746b;
 .containerStart{
-    display:hidden;
     header{
         display: flex;
         justify-content: space-around;

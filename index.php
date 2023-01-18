@@ -28,10 +28,12 @@
     } */
 
     ?>
-    <video width="1920" height="1080" id="introLooped"  onclick="changeToEndIntro()" autoplay muted loop>
-        <source src="asset/medias/logo_animation_loop.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la balise video.
-    </video>
+    <div class="containerVideo">
+        <video width="1920" height="1080" id="introLooped"  onclick="changeToEndIntro()" autoplay muted loop>
+            <source src="asset/medias/logo_animation_loop.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la balise video.
+        </video>
+    </div>
     <div class="containerStart">
         <header>
             <img src="asset/img/logotype_nathaniel_test.png" alt="logo" class="logo">
@@ -47,7 +49,7 @@
             <img src="asset/img/n_josse.jpg" alt="photographie de Nathaniel Josse" class="imgProfil">
             <p><?php AffichageBdd::affichage($result, 0);?><p>
         </div>
-
+<!--
         <div id="carouselExampleIndicators" class="carousel slide m-3" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -79,6 +81,8 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+
+-->
         
 
     </div>

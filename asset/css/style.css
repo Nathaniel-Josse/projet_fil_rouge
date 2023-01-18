@@ -6,17 +6,15 @@
   box-sizing: border-box;
 }
 
-#introLooped {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+.containerVideo {
+  display: flex;
+  justify-content: center;
 }
 
-.containerStart {
-  display: hidden;
+.hidden {
+  opacity: 0;
 }
+
 .containerStart header {
   display: flex;
   justify-content: space-around;
