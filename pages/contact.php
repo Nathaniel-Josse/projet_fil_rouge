@@ -25,10 +25,10 @@
     </header>
     <div class="formContainer">
         <form action="../include/traitementbdd.php" method="POST" id="formContact">
-            <label for="objet"> Objet : </label><br>
-            <input type="objet" name="objet" id="objet" placeholder="Objet du message"><br>
-            <label for="message">Message : </label><br>
-            <textarea id="message" name="message" rows="10" cols="50" placeholder="Écrivez votre message ici"></textarea><br>
+            <label for="objet" class="form-label"> Objet : </label><br>
+            <input type="objet" class="form-control" name="objet" id="objet" placeholder="Objet du message"><br>
+            <label for="message" class="form-label">Message : </label><br>
+            <textarea id="message" class="form-control" name="message" rows="10" cols="50" placeholder="Écrivez votre message ici"></textarea><br>
             
             <input type="submit" value="Envoyer le messsage">
         </form>
