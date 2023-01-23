@@ -12,6 +12,10 @@
 .hidden{
     display:hidden;
 }
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
 $link-color: #00a29b;
 $link-hover-color: #00746b;
 .containerStart{

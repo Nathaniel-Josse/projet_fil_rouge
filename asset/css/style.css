@@ -15,6 +15,11 @@
   display: hidden;
 }
 
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
 .containerStart header {
   display: flex;
   justify-content: space-around;
