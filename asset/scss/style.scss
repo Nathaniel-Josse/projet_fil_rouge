@@ -5,9 +5,14 @@
     margin:0;
     box-sizing: border-box;
 }
+html, body { /* Permet de désactiver le scrolling horizontal en dégageant les côtés */
+    max-width: 100%;
+    overflow-x: hidden;
+}
 .containerVideo {
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 .hidden{
     display:hidden;
