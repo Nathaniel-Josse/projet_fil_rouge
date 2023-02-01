@@ -9,7 +9,7 @@ $('body').bind('touchmove', function(e){e.preventDefault()});
 function changeToEndIntro() {
     intro.removeAttribute("onclick");
     intro.pause();
-    intro.getElementsByTagName('source')[0].src="asset/medias/logo_animation_end_v2.mp4";
+    intro.getElementsByTagName('source')[0].src="asset/medias/logo_animation_end_v3.mp4";
     intro.loop = false;
     intro.load();
     intro.play();

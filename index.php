@@ -28,6 +28,16 @@
     } */
 
     ?>
+    <header>
+        <img src="asset/img/logotype_nathaniel_test.png" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.php" title="accueil">Accueil</a></li>
+                <li><a href="pages/realisations.php" title="realisations">Réalisations</a></li>
+                <li><a href="pages/contact.php" title="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="containerVideo">
         <video width="1920" height="1080" id="introLooped"  onclick="changeToEndIntro()" autoplay muted loop>
             <source src="asset/medias/logo_animation_loop.mp4" type="video/mp4">
@@ -35,16 +45,6 @@
         </video>
     </div>
     <div class="containerStart">
-        <header>
-            <img src="asset/img/logotype_nathaniel_test.png" alt="logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="index.php" title="accueil">Accueil</a></li>
-                    <li><a href="pages/realisations.php" title="realisations">Réalisations</a></li>
-                    <li><a href="pages/contact.php" title="contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
         <div class="container1">
             <img src="asset/img/n_josse.jpg" alt="photographie de Nathaniel Josse" class="imgProfil">
             <p><?php AffichageBdd::affichage($result, 0);?><p>

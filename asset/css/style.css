@@ -23,48 +23,53 @@ html, body { /* Permet de désactiver le scrolling horizontal en dégageant les 
   display: hidden;
 }
 
+h1, h2, h3 {
+  text-align: center;
+}
+
 /*
 $link-color: #00a29b;
 $link-hover-color: #00746b;
 */
-.containerStart header {
+header {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: rgba(129, 255, 249, 0.1568627451);
   margin-bottom: 10px;
 }
-.containerStart header nav {
+header nav {
   display: flex;
   justify-content: space-between;
 }
-.containerStart header nav ul {
+header nav ul {
   list-style: none;
 }
-.containerStart header nav ul li {
+header nav ul li {
   display: inline-block;
   margin: 0 10px 0 10px;
 }
-.containerStart header nav ul li a:link, .containerStart header nav ul li a:visited {
+header nav ul li a:link, header nav ul li a:visited {
   color: #00a29b;
   text-decoration: none;
 }
-.containerStart header nav ul li a:hover {
+header nav ul li a:hover {
   color: #00746b;
   text-decoration: none;
 }
-.containerStart header nav ul li a:active {
+header nav ul li a:active {
   color: #00a29b;
   text-decoration: none;
 }
-.containerStart .container1 {
+
+.container1 {
   background: rgb(198, 198, 198);
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 50px;
 }
-.containerStart .container1 .imgProfil {
+.container1 .imgProfil {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
@@ -72,13 +77,9 @@ $link-hover-color: #00746b;
   width: 250px;
   margin: 5px;
 }
-.containerStart .container1 p {
+.container1 p {
   text-align: right;
   margin: 5px;
-}
-.containerStart #carouselExampleIndicators {
-  width: 300px;
-  height: 300px;
 }
 
 footer {
