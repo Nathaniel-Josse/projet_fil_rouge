@@ -13,17 +13,31 @@
     <meta name="author" content="Nathaniel">
 </head>
 <body>
-    <div class="containerStart">
-        <header>
-            <img src="../asset/img/logotype_nathaniel_test.png" alt="logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="../index.php" title="accueil">Accueil</a></li>
-                    <li><a href="#" title="realisations">Réalisations</a></li>
-                    <li><a href="contact.php" title="contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <img src="../asset/img/logotype_nathaniel_test.png" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="../index.php" title="accueil">ACCUEIL</a></li>
+                <li><a href="#" title="realisations">RÉALISATIONS</a></li>
+                <li><a href="contact.php" title="contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="containerRea1">
+        <div class="titleRea1">
+            <p>Développement Web (Html, CSS, PHP)</p>
+        </div>
+        <div class="Rea1">
+            <!-- <img class Rea1_1/1_2/1_3> x3-->
+        </div>
+    </div>
+    <div class="containerRea2">
+        <div class="titleRea2">
+            <p>Graphique (Reproductions de Pixel Arts)</p>
+        </div>
+        <div class="Rea2">
+            <!-- <img class Rea1_1/1_2/1_3> x3-->
+        </div>
     </div>
 </body>
 <footer>

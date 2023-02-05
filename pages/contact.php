@@ -13,24 +13,28 @@
     <meta name="author" content="Nathaniel">
 </head>
 <body>
-    <div class="containerStart">
-        <header>
-            <img src="../asset/img/logotype_nathaniel_test.png" alt="logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="../index.php" title="accueil">Accueil</a></li>
-                    <li><a href="realisations.php" title="realisations">Réalisations</a></li>
-                    <li><a href="contact.php" title="contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
+    <header>
+        <img src="../asset/img/logotype_nathaniel_test.png" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="../index.php" title="accueil">ACCUEIL</a></li>
+                <li><a href="realisations.php" title="realisations">RÉALISATIONS</a></li>
+                <li><a href="contact.php" title="contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="formContainer">
         <form action="../include/traitementbdd.php" method="POST" id="formContact">
+            <label for="email" class="form-label"> Votre email : </label><br>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Votre email"><br>
             <label for="objet" class="form-label"> Objet : </label><br>
             <input type="objet" class="form-control" name="objet" id="objet" placeholder="Objet du message"><br>
             <label for="message" class="form-label">Message : </label><br>
             <textarea id="message" class="form-control" name="message" rows="10" cols="50" placeholder="Écrivez votre message ici"></textarea><br>
+
+            <div class="rgpd">
+                <p>RGPD blabla</p>
+            </div>
             
             <input type="submit" value="Envoyer le messsage">
         </form>

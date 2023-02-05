@@ -32,9 +32,9 @@
         <img src="asset/img/logotype_nathaniel_test.png" alt="logo" class="logo">
         <nav>
             <ul>
-                <li><a href="index.php" title="accueil">Accueil</a></li>
-                <li><a href="pages/realisations.php" title="realisations">Réalisations</a></li>
-                <li><a href="pages/contact.php" title="contact">Contact</a></li>
+                <li><a href="index.php" title="accueil">ACCUEIL</a></li>
+                <li><a href="pages/realisations.php" title="realisations">RÉALISATIONS</a></li>
+                <li><a href="pages/contact.php" title="contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
@@ -45,48 +45,42 @@
         </video>
     </div>
     <div class="containerStart">
-        <div class="container1">
+        <div class="containerPhoto">
             <img src="asset/img/n_josse.jpg" alt="photographie de Nathaniel Josse" class="imgProfil">
+        </div>
+        <div class="rectanglePres">
             <p><?php AffichageBdd::affichage($result, 0);?><p>
         </div>
-<!--
-        <div id="carouselExampleIndicators" class="carousel slide m-3" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="asset/img/carrousel_image_1.png" class="d-block w-100" alt="Mario en pixels">
-                </div>
-                <div class="carousel-item">
-                    <img src="asset/img/carrousel_image_2_tmp.png" class="d-block w-100" alt="Mario en pixels dans l'autre sens">
-                </div>
-                <div class="carousel-item">
-                    <img src="asset/img/carrousel_image_3_tmp.png" class="d-block w-100" alt="Mario en pixels à l'envers">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
--->
-        
-
     </div>
-
+    <div class="title">
+        <p><span class="prenom">Nathaniel </span><span class="nom">Josse</span></p>
+        <p><span class="dev">Développeur </span><span class="web">Web</span></p>
+    </div>
+    <div class="rectangleSelec">
+        <p>Sélection de réalisations</p>
+    </div>
+    <div class="selecHomeRea">
+        <!-- Trois images de réal. à lier avec BDD-->
+    </div>
+    <div class="knowMoreTitle">
+        <p>En savoir plus sur moi</p>
+    </div>
+    <div class="knowMoreContainer">
+        <div class="CV">
+            <div class="horizontal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" stroke-width="2.5" stroke="#CACBD2" fill="none" class="duration-300 transform transition-all" style="width: 48px; height: 48px;"><path stroke-linecap="round" d="M25.15 7.74h25.66v48.52H13.19V20.6L25.15 7.74z"></path><path d="M25.17 7.74l-.02 12.86H13.19M18.34 47.67h17.01M18.34 41.14h27.01M18.34 35.04h27.01M18.34 28.94h27.01"></path></svg>
+                <p>Mon CV</p>
+            </div>
+            <p>Pour connaître mes compétences détaillées, ainsi que ce que je recherche actuellement.</p> <!--Lien BDD-->
+        </div>
+        <div class="Contact">
+            <div class="horizontal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" stroke-width="2.5" stroke="#CACBD2" fill="none" class="duration-300 transform transition-all" style="width: 48px; height: 48px;"><circle cx="32" cy="18.14" r="11.14"></circle><path d="M54.55 56.85A22.55 22.55 0 0032 34.3h0A22.55 22.55 0 009.45 56.85z"></path></svg>
+                <p>Contact</p>
+            </div>
+            <p>Pour m’envoyer un message directement sur une page de Contact dédiée.</p> <!--Lien BDD-->
+        </div>
+    </div>
 </body>
 
 <footer>

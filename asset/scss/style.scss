@@ -57,7 +57,7 @@ header{
         }
     }
 }
-    .container1{
+    .containerPhoto{
         background: rgb(198, 198, 198);
         display:flex;
         justify-content: space-around;
@@ -70,6 +70,8 @@ header{
             width: 250px;
             margin: 5px;
         }
+    }
+    .rectanglePres{
         p{
             text-align: right;
             margin: 5px;

@@ -27,8 +27,9 @@
 
 $pdo = new PDO("mysql:host=localhost;dbname=projet_fil_rouge", "root", "", [PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT]);
 
-if($_POST && $_POST["objet"] && $_POST["message"]){
-    $ajout = $pdo->prepare("INSERT INTO contact (objet, message) VALUES (:objet, :message)");
+if($_POST && $_POST["objet"] && $_POST["message"] && $_POST["email"]){
+    $ajout = $pdo->prepare("INSERT INTO contact (email, objet, message) VALUES (:email, :objet, :message)");
+    $ajout->bindValue(":email", $_POST["email"]);
     $ajout->bindValue(":objet", $_POST["objet"]);
     $ajout->bindValue(":message", $_POST["message"]);
     $resultat = $ajout->execute();
