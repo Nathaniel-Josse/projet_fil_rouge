@@ -9,17 +9,24 @@ html, body { /* Permet de désactiver le scrolling horizontal en dégageant les 
     max-width: 100%;
     overflow-x: hidden;
 }
-.containerVideo {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    background-color: rgb(51,51,51);
-}
 .hidden{
     display:hidden;
 }
-h1,h2,h3{
-    text-align: center;
+@font-face {
+    font-family: helvetica_medium;
+    src: url("/asset/fonts/helvetica_neue_medium_extended.otf");
+}
+@font-face {
+    font-family: helvetica_ultralight;
+    src: url("/asset/fonts/helvetica_neue_ultralight.otf");
+}
+@font-face {
+    font-family: agatho_light;
+    src: url("/asset/fonts/agatho_light.otf");
+}
+@font-face {
+    font-family: agatho_narrow;
+    src: url("/asset/fonts/agatho_narrow.otf");
 }
 /*
 $link-color: #00a29b;
@@ -57,12 +64,22 @@ header{
         }
     }
 }
+.containerVideo {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(51,51,51);
+    margin-bottom: 50px;
+}
+.containerStart{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     .containerPhoto{
-        background: rgb(198, 198, 198);
-        display:flex;
-        justify-content: space-around;
-        align-items: center;
+        background: #00a29a82;
         margin-bottom: 50px;
+        padding: 50px;
+        border-radius: 100%;
         .imgProfil {
             object-fit: cover;
             border-radius: 50%;
@@ -72,11 +89,160 @@ header{
         }
     }
     .rectanglePres{
+        background: #00A29B;
+        width:70%;
+        height:100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 36px;
         p{
-            text-align: right;
+            color: #fff;
             margin: 5px;
+            text-align: center;
+            margin-left: 35px;
+            margin-right: 20px;
         }
     }
+}
+.title{
+    .prenom{
+        font-family:agatho_light;
+        font-size: 150px;
+        margin-left:30px;
+    }
+    .nom{
+        font-family:agatho_narrow;
+        font-size: 150px;
+    }
+    .dev{
+        font-family:helvetica_medium;
+        font-size: 150px;
+        color:#00a29a80;
+        margin-left:300px;
+    }
+    .web{
+        font-family:helvetica_ultralight;
+        font-size: 150px;
+        color:#0994BA;
+    }
+}
+.containerRectangleDiago{
+    position: relative;
+    background: red;
+    .rectangleDiago{
+        width:2500px;
+        height:150px;
+        background: #00a29a2a;
+        transform: rotate(-24deg);
+        position: absolute;
+        top:-500px;
+        left:-250px;
+    }
+}
+.rectangleSelec{
+    background: #00a29a2a;
+    width:100%;
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:30px;
+    p{
+        text-align: center;
+        font-family: helvetica_medium;
+        font-size:30px;
+        margin-top: 15px;
+    }
+}
+.selecHomeRea{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img{
+        border:#000 1px solid;
+        margin-top:40px;
+        width:25%;
+    }
+}
+.knowMoreTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00a29a2a;
+    margin-top: 100px;
+    width:45%;
+    height:60px;
+    border-radius: 36px;
+    p{
+        text-align: center;
+        font-size: 25px;
+        font-family: helvetica_medium;
+        margin-top: 15px;
+    }
+}
+.knowMoreContainer{
+    display:flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    .cv{
+        width:400px;
+        height:200px;
+        background-color: #00a29a2a;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        filter: drop-shadow(0 0 5px #00000093);
+        .horizontal{
+            display: flex;
+            justify-content: space-around;
+            margin-top:20px;
+            svg{
+                filter: none;
+                margin-top: 5px;
+            }
+            p{
+                font-size:30px;
+                margin-top: 20px;
+            }
+        }
+        p{
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+    .contact{
+        width:400px;
+        height:200px;
+        background-color: #00a29a2a;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        filter: drop-shadow(0 0 5px #00000093);
+        .horizontal{
+            display: flex;
+            justify-content: space-around;
+            margin-top:20px;
+            svg{
+                filter: none;
+                margin-top: 15px;
+            }
+            p{
+                font-size:30px;
+                margin-top: 20px;
+            }
+        }
+        p{
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+
+}
 footer{
     background: rgb(62, 62, 62);
     width:100%;
@@ -108,7 +274,8 @@ footer{
 // contact.php
 
 .formContainer{
-    margin:auto;
+    margin-left:100px;
+    margin-right:100px;
 }
 
 // TraitementBdd.php
@@ -120,4 +287,12 @@ footer{
 .errorMessage{
     margin:auto;
     background-color: rgba(255, 176, 176, 0.5);
+}
+
+// mleg.php
+
+.mleg_p{
+    margin-left:300px;
+    margin-right:300px;
+    margin-top: 5px;
 }

@@ -47,5 +47,5 @@
 <footer>
     <script src="asset/js/script.js"></script>
     <p>© Nathaniel Josse - 2023 - </p>
-    <p><a href="pages/mleg.php" title="mentions legales">Mentions légales</a></p>
+    <p><a href="mleg.php" title="mentions legales">Mentions légales</a></p>
 </footer>

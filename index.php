@@ -19,7 +19,10 @@
     $pdo = new PDO("mysql:host=localhost;dbname=projet_fil_rouge", "root", "", [PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT]);
     $request = $pdo->prepare("SELECT content FROM text_content");
     $request->execute();
-    $result = $request->fetchAll(PDO::FETCH_ASSOC);
+    $resultText = $request->fetchAll(PDO::FETCH_ASSOC);
+    $request = $pdo->prepare("SELECT link FROM images");
+    $request->execute();
+    $resultIm = $request->fetchAll(PDO::FETCH_ASSOC);
     /* foreach ($result[0] as $key => $value) {
         echo $key . "=>" . $value . "<br>";
     }
@@ -49,31 +52,36 @@
             <img src="asset/img/n_josse.jpg" alt="photographie de Nathaniel Josse" class="imgProfil">
         </div>
         <div class="rectanglePres">
-            <p><?php AffichageBdd::affichage($result, 0);?><p>
+            <p><?php AffichageBdd::affichage($resultText, 0);?><p>
         </div>
     </div>
     <div class="title">
         <p><span class="prenom">Nathaniel </span><span class="nom">Josse</span></p>
         <p><span class="dev">Développeur </span><span class="web">Web</span></p>
     </div>
+    <div class="containerRectangleDiago">
+        <div class="rectangleDiago"></div>
+    </div>
     <div class="rectangleSelec">
         <p>Sélection de réalisations</p>
     </div>
     <div class="selecHomeRea">
-        <!-- Trois images de réal. à lier avec BDD-->
+        <img src="<?php AffichageBdd::affichage($resultIm, 0);?>" alt="capture d'écran d'une réalisation" class="rea1Home">
+        <img src="<?php AffichageBdd::affichage($resultIm, 1);?>" alt="capture d'écran d'une réalisation" class="rea2Home">
+        <img src="<?php AffichageBdd::affichage($resultIm, 2);?>" alt="capture d'écran d'une réalisation" class="rea3Home">
     </div>
     <div class="knowMoreTitle">
         <p>En savoir plus sur moi</p>
     </div>
     <div class="knowMoreContainer">
-        <div class="CV">
+        <div class="cv">
             <div class="horizontal">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" stroke-width="2.5" stroke="#CACBD2" fill="none" class="duration-300 transform transition-all" style="width: 48px; height: 48px;"><path stroke-linecap="round" d="M25.15 7.74h25.66v48.52H13.19V20.6L25.15 7.74z"></path><path d="M25.17 7.74l-.02 12.86H13.19M18.34 47.67h17.01M18.34 41.14h27.01M18.34 35.04h27.01M18.34 28.94h27.01"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" stroke-width="2.5" stroke="#CACBD2" fill="none" class="duration-300 transform transition-all" style="width: 60px; height: 60px;"><path stroke-linecap="round" d="M25.15 7.74h25.66v48.52H13.19V20.6L25.15 7.74z"></path><path d="M25.17 7.74l-.02 12.86H13.19M18.34 47.67h17.01M18.34 41.14h27.01M18.34 35.04h27.01M18.34 28.94h27.01"></path></svg>
                 <p>Mon CV</p>
             </div>
             <p>Pour connaître mes compétences détaillées, ainsi que ce que je recherche actuellement.</p> <!--Lien BDD-->
         </div>
-        <div class="Contact">
+        <div class="contact">
             <div class="horizontal">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" stroke-width="2.5" stroke="#CACBD2" fill="none" class="duration-300 transform transition-all" style="width: 48px; height: 48px;"><circle cx="32" cy="18.14" r="11.14"></circle><path d="M54.55 56.85A22.55 22.55 0 0032 34.3h0A22.55 22.55 0 009.45 56.85z"></path></svg>
                 <p>Contact</p>
@@ -81,10 +89,10 @@
             <p>Pour m’envoyer un message directement sur une page de Contact dédiée.</p> <!--Lien BDD-->
         </div>
     </div>
+    <script src="asset/js/script.js"></script>
 </body>
 
 <footer>
-    <script src="asset/js/script.js"></script>
     <p>© Nathaniel Josse - 2023 - </p>
     <p><a href="pages/mleg.php" title="mentions legales">Mentions légales</a></p>
 </footer>

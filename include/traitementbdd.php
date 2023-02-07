@@ -39,6 +39,8 @@ if($_POST && $_POST["objet"] && $_POST["message"] && $_POST["email"]){
     } else {
         echo "<div class='errorMessage'>Erreur lors de l'envoi du message, veuillez réessayer.</div>";
     }
+} else {
+    echo "<div class='errorMessage'>Erreur lors de l'envoi du message, veuillez réessayer.</div>";
 }
 ?>
 </body>
