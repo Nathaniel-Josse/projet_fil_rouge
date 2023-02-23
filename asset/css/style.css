@@ -285,6 +285,9 @@ footer p a:active {
   margin-left: 100px;
   margin-right: 100px;
 }
+.formContainer input {
+  padding: 10px;
+}
 
 .successMessage {
   margin: auto;
@@ -299,5 +302,30 @@ footer p a:active {
 .mleg_p {
   margin-left: 300px;
   margin-right: 300px;
-  margin-top: 5px;
+  margin-top: 20px;
+}
+
+.h2_mleg {
+  margin-top: 50px;
+  color: #00a29b;
+}
+
+.h3_mleg {
+  color: #01d1bf;
+}
+
+.co {
+  margin-top: 30px;
+  text-align: center;
+  color: #00a29b;
+}
+
+.formAdm {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.formAdm input {
+  padding: 10px;
 }

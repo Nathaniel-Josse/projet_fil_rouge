@@ -23,6 +23,7 @@
             </ul>
         </nav>
     </header>
+    <h1 class="co">Contact</h1>
     <div class="formContainer">
         <form action="../include/traitementbdd.php" method="POST" id="formContact">
             <label for="email" class="form-label"> Votre email : </label><br>

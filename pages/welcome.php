@@ -23,13 +23,22 @@
             </ul>
         </nav>
     </header>
+    <h1 class="co">Connexion</h1>
+    <?php require_once "../include/admTraitement.php"; ?>
     <div class="formAdm">
-        <form action="../include/admTraitement.php" method="POST" id="formAdm">
+        <form action="" method="POST" id="formAdm">
             <label for="user" class="form-label"> User : </label><br>
             <input type="user" class="form-control" name="user" id="user" placeholder="Votre username"><br>
             <label for="mdp" class="form-label"> Mot de passe : </label><br>
             <input type="mdp" class="form-control" name="mdp" id="mdp" placeholder="Votre mot de passe"><br>
             
-            <input type="submit" value="Se connecter">
+            <input type="submit" name="submit" value="Se connecter">
         </form>
     </div>
+
+</body>
+<footer>
+    <script src="asset/js/script.js"></script>
+    <p>© Nathaniel Josse - 2023 - </p>
+    <p><a href="mleg.php" title="mentions legales">Mentions légales</a></p>
+</footer>
