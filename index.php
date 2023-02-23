@@ -23,6 +23,9 @@
     $request = $pdo->prepare("SELECT link FROM images");
     $request->execute();
     $resultIm = $request->fetchAll(PDO::FETCH_ASSOC);
+    $request = $pdo->prepare("SELECT project_link FROM images");
+    $request->execute();
+    $resultImProj = $request->fetchAll(PDO::FETCH_ASSOC);
     /* foreach ($result[0] as $key => $value) {
         echo $key . "=>" . $value . "<br>";
     }
@@ -43,7 +46,7 @@
     </header>
     <div class="containerVideo">
         <video width="1920" height="1080" id="introLooped"  onclick="changeToEndIntro()" autoplay muted loop>
-            <source src="asset/medias/logo_animation_loop.mp4" type="video/mp4">
+            <source src="asset/medias/logo_animation loop_final_fr.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la balise video.
         </video>
     </div>
@@ -66,9 +69,21 @@
         <p>Sélection de réalisations</p>
     </div>
     <div class="selecHomeRea">
-        <img src="<?php AffichageBdd::affichage($resultIm, 0);?>" alt="capture d'écran d'une réalisation" class="rea1Home">
-        <img src="<?php AffichageBdd::affichage($resultIm, 1);?>" alt="capture d'écran d'une réalisation" class="rea2Home">
-        <img src="<?php AffichageBdd::affichage($resultIm, 2);?>" alt="capture d'écran d'une réalisation" class="rea3Home">
+        <?php if(!empty(AffichageBdd::retour($resultImProj, 0))){
+            echo "<a href=" . AffichageBdd::retour($resultImProj, 0) . " target='_blank'> <img src=" . AffichageBdd::retour($resultIm, 0) . " alt='capture d'écran d'une réalisation' class='rea1Home'></a>";
+            } else {
+                echo "<img src=" . AffichageBdd::retour($resultIm, 0) . " alt='capture d'écran d'une réalisation' class='rea1Home'>";
+            }?>
+        <?php if(!empty(AffichageBdd::retour($resultImProj, 1))){
+            echo "<a href=" . AffichageBdd::retour($resultImProj, 1) . " target='_blank'> <img src=" . AffichageBdd::retour($resultIm, 1) . " alt='capture d'écran d'une réalisation' class='rea2Home'></a>";
+            } else {
+                echo "<img src=" . AffichageBdd::retour($resultIm, 1) . " alt='capture d'écran d'une réalisation' class='rea2Home'>";
+            }?>
+        <?php if(!empty(AffichageBdd::retour($resultImProj, 2))){
+            echo "<a href=" . AffichageBdd::retour($resultImProj, 2) . " target='_blank'> <img src=" . AffichageBdd::retour($resultIm, 2) . " alt='capture d'écran d'une réalisation' class='rea3Home'></a>";
+            } else {
+                echo "<img src=" . AffichageBdd::retour($resultIm, 2) . " alt='capture d'écran d'une réalisation' class='rea3Home'>";
+            }?>
     </div>
     <div class="knowMoreTitle">
         <p>En savoir plus sur moi</p>

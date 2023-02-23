@@ -23,3 +23,13 @@
             </ul>
         </nav>
     </header>
+    <div class="formAdm">
+        <form action="../include/admTraitement.php" method="POST" id="formAdm">
+            <label for="user" class="form-label"> User : </label><br>
+            <input type="user" class="form-control" name="user" id="user" placeholder="Votre username"><br>
+            <label for="mdp" class="form-label"> Mot de passe : </label><br>
+            <input type="mdp" class="form-control" name="mdp" id="mdp" placeholder="Votre mot de passe"><br>
+            
+            <input type="submit" value="Se connecter">
+        </form>
+    </div>

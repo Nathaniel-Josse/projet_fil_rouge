@@ -7,6 +7,11 @@ class AffichageBdd {
             echo $value;
         }
     }
+    public static function retour($array, $nb){
+        foreach ($array[$nb] as $key => $value) {
+            return $value;
+        }
+    }
 
 }
 
