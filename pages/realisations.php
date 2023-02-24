@@ -23,12 +23,39 @@
             </ul>
         </nav>
     </header>
+    <?php
+    require_once "../include/connexionbdd.php";
+    require_once "../include/Affichagebdd.php";
+    $request = $pdo->prepare("SELECT link_rea_code FROM realisations_code");
+    $request->execute();
+    $resultReaCodeIm = $request->fetchAll(PDO::FETCH_ASSOC);
+    $request = $pdo->prepare("SELECT project_link_rea_code FROM realisations_code");
+    $request->execute();
+    $resultReaCodeProj = $request->fetchAll(PDO::FETCH_ASSOC);
+    $request = $pdo->prepare("SELECT link_rea_graph FROM realisations_graph");
+    $request->execute();
+    $resultReaGraphIm = $request->fetchAll(PDO::FETCH_ASSOC); ?>
+    <h1 class="co">Réalisations</h1>
     <div class="containerRea1">
         <div class="titleRea1">
             <p>Développement Web (Html, CSS, PHP)</p>
         </div>
         <div class="Rea1">
-            <!-- <img class Rea1_1/1_2/1_3> x3-->
+        <?php if(!empty(AffichageBdd::retour($resultReaCodeProj, 0))){
+            echo "<a href=" . AffichageBdd::retour($resultReaCodeProj, 0) . " target='_blank'> <img src=" . AffichageBdd::retour($resultReaCodeIm, 0) . " alt='capture d'écran d'une réalisation' class='rea1Code'></a>";
+            } else {
+                echo "<img src=" . AffichageBdd::retour($resultReaCodeIm, 0) . " alt='capture d'écran d'une réalisation' class='rea1Code'>";
+            }?>
+        <?php if(!empty(AffichageBdd::retour($resultReaCodeProj, 1))){
+            echo "<a href=" . AffichageBdd::retour($resultReaCodeProj, 1) . " target='_blank'> <img src=" . AffichageBdd::retour($resultReaCodeIm, 1) . " alt='capture d'écran d'une réalisation' class='rea2Code'></a>";
+            } else {
+                echo "<img src=" . AffichageBdd::retour($resultReaCodeIm, 1) . " alt='capture d'écran d'une réalisation' class='rea2Code'>";
+            }?>
+        <?php if(!empty(AffichageBdd::retour($resultReaCodeProj, 2))){
+            echo "<a href=" . AffichageBdd::retour($resultReaCodeProj, 2) . " target='_blank'> <img src=" . AffichageBdd::retour($resultReaCodeIm, 2) . " alt='capture d'écran d'une réalisation' class='rea3Code'></a>";
+            } else {
+                echo "<img src=" . AffichageBdd::retour($resultReaCodeIm, 2) . " alt='capture d'écran d'une réalisation' class='rea3Code'>";
+            }?>
         </div>
     </div>
     <div class="containerRea2">
@@ -36,7 +63,9 @@
             <p>Graphique (Reproductions de Pixel Arts)</p>
         </div>
         <div class="Rea2">
-            <!-- <img class Rea1_1/1_2/1_3> x3-->
+            <?php echo "<img src=" . AffichageBdd::retour($resultReaGraphIm, 0) . " alt='capture d'écran d'une réalisation' class='rea1Graph'>"; ?>
+            <?php echo "<img src=" . AffichageBdd::retour($resultReaGraphIm, 1) . " alt='capture d'écran d'une réalisation' class='rea2Graph'>"; ?>
+            <?php echo "<img src=" . AffichageBdd::retour($resultReaGraphIm, 2) . " alt='capture d'écran d'une réalisation' class='rea3Graph'>"; ?>
         </div>
     </div>
 </body>

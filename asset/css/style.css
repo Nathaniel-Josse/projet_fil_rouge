@@ -162,19 +162,19 @@ header nav ul li a:active {
   margin-top: 15px;
 }
 
-.selecHomeRea {
+.selecHomeRea, .Rea1, .Rea2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.selecHomeRea img {
+.selecHomeRea img, .Rea1 img, .Rea2 img {
   border: #000 1px solid;
   margin-top: 40px;
-  width: 245px;
-  height: 142px;
+  width: 490px;
+  height: 284px;
 }
 
-.knowMoreTitle {
+.knowMoreTitle, .containerRea2 .titleRea2, .containerRea1 .titleRea1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,7 +184,7 @@ header nav ul li a:active {
   height: 60px;
   border-radius: 36px;
 }
-.knowMoreTitle p {
+.knowMoreTitle p, .containerRea2 .titleRea2 p, .containerRea1 .titleRea1 p {
   text-align: center;
   font-size: 25px;
   font-family: helvetica_medium;
@@ -279,6 +279,28 @@ footer p a:hover {
 footer p a:active {
   color: #00a29b;
   text-decoration: none;
+}
+
+.Rea1 img, .Rea2 img {
+  background: #fff;
+}
+
+.containerRea1 {
+  background: rgba(0, 162, 154, 0.1215686275);
+  padding-bottom: 30px;
+}
+.containerRea1 .titleRea1 {
+  background: #00A29B;
+  color: #fff;
+}
+
+.containerRea2 {
+  background: rgba(0, 162, 154, 0.1215686275);
+  padding-bottom: 30px;
+}
+.containerRea2 .titleRea2 {
+  background: #00A29B;
+  color: #fff;
 }
 
 .formContainer {

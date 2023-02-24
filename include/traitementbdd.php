@@ -25,7 +25,7 @@
     </header>
 <?php
 
-$pdo = new PDO("mysql:host=localhost;dbname=projet_fil_rouge", "root", "", [PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT]);
+require_once "connexionbdd.php";
 
 if($_POST && $_POST["objet"] && $_POST["message"] && $_POST["email"]){
     $ajout = $pdo->prepare("INSERT INTO contact (email, objet, message) VALUES (:email, :objet, :message)");

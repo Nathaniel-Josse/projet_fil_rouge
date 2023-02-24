@@ -162,8 +162,8 @@ header{
     img{
         border:#000 1px solid;
         margin-top:40px;
-        width:245px;
-        height:142px;
+        width:490px;
+        height:284px;
     }
 }
 .knowMoreTitle{
@@ -271,6 +271,34 @@ footer{
         }
     }
 }
+
+//realisations.php
+
+.Rea1,.Rea2{
+    @extend .selecHomeRea;
+    img{
+        background: #fff;
+    }
+}
+.containerRea1{
+    background: #00a29a1f;
+    padding-bottom: 30px;
+    .titleRea1{
+        @extend .knowMoreTitle;
+        background: #00A29B;
+        color:#fff;
+    }
+}
+.containerRea2{
+    background: #00a29a1f;
+    padding-bottom: 30px;
+    .titleRea2{
+        @extend .knowMoreTitle;
+        background: #00A29B;
+        color:#fff;
+    }
+}
+
 
 // contact.php
 

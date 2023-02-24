@@ -14,9 +14,9 @@
 </head>
 <body>
     <?php
+    require_once "include/connexionbdd.php";
     require_once "include/AffichageBdd.php";
     
-    $pdo = new PDO("mysql:host=localhost;dbname=projet_fil_rouge", "root", "", [PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT]);
     $request = $pdo->prepare("SELECT content FROM text_content");
     $request->execute();
     $resultText = $request->fetchAll(PDO::FETCH_ASSOC);

@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
 
             $password = sha1($_POST['mdp']);
 
-            $pdo = new PDO("mysql:host=localhost;dbname=projet_fil_rouge", "root", "", [PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT]);
+            require_once "connexionbdd.php";
             $request = $pdo->prepare("SELECT username FROM adm");
             $request->execute();
             $verifUser = $request->fetchAll(PDO::FETCH_ASSOC);

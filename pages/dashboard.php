@@ -32,7 +32,7 @@ if($_COOKIE["passDash"] == "54a850jsp"){
         <h1 class="co"><?= "Bonjour " . $_SESSION['admin'];?></h1>
 
         <?php
-        $pdo = new PDO("mysql:host=localhost;dbname=projet_fil_rouge", "root", "", [PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT]);
+        require_once "../include/connexionbdd.php";
         $request = $pdo->prepare("SELECT * FROM contact");
         $request->execute();
         $resultContact = $request->fetchAll(PDO::FETCH_ASSOC);
