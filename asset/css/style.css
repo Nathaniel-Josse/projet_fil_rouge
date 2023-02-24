@@ -196,7 +196,19 @@ header nav ul li a:active {
   justify-content: space-around;
   margin-top: 30px;
 }
-.knowMoreContainer .cv {
+.knowMoreContainer a:link, .knowMoreContainer a:visited {
+  color: #000;
+  text-decoration: none;
+}
+.knowMoreContainer a:hover {
+  color: #00746b;
+  text-decoration: none;
+}
+.knowMoreContainer a:active {
+  color: #00a29b;
+  text-decoration: none;
+}
+.knowMoreContainer a .cv {
   width: 400px;
   height: 200px;
   background-color: rgba(0, 162, 154, 0.1647058824);
@@ -206,20 +218,20 @@ header nav ul li a:active {
   align-items: center;
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5764705882));
 }
-.knowMoreContainer .cv .horizontal {
+.knowMoreContainer a .cv .horizontal {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
 }
-.knowMoreContainer .cv .horizontal svg {
+.knowMoreContainer a .cv .horizontal svg {
   filter: none;
   margin-top: 5px;
 }
-.knowMoreContainer .cv .horizontal p {
+.knowMoreContainer a .cv .horizontal p {
   font-size: 30px;
   margin-top: 20px;
 }
-.knowMoreContainer .cv p {
+.knowMoreContainer a .cv p {
   text-align: center;
   margin-left: 10px;
   margin-right: 10px;
@@ -288,6 +300,7 @@ footer p a:active {
 .containerRea1 {
   background: rgba(0, 162, 154, 0.1215686275);
   padding-bottom: 30px;
+  margin-top: -30px;
 }
 .containerRea1 .titleRea1 {
   background: #00A29B;
@@ -350,4 +363,16 @@ footer p a:active {
 }
 .formAdm input {
   padding: 10px;
+}
+
+.h2_a {
+  color: #01d1bf;
+  margin-top: 50px;
+  margin-left: 10%;
+}
+
+.tableA {
+  width: 80%;
+  margin: auto;
+  text-align: center;
 }

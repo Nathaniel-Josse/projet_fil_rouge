@@ -18,16 +18,7 @@ if($_COOKIE["passDash"] == "54a850jsp"){
         <meta name="author" content="Nathaniel">
     </head>
     <body>
-        <header>
-            <img src="../asset/img/logotype_nathaniel_test.png" alt="logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="../index.php" title="accueil">ACCUEIL</a></li>
-                    <li><a href="realisations.php" title="realisations">RÉALISATIONS</a></li>
-                    <li><a href="contact.php" title="contact">CONTACT</a></li>
-                </ul>
-            </nav>
-        </header>
+        <?php require_once "../include/headerPages.php"; ?>
 
         <h1 class="co"><?= "Bonjour " . $_SESSION['admin'];?></h1>
 
@@ -42,9 +33,16 @@ if($_COOKIE["passDash"] == "54a850jsp"){
         $request = $pdo->prepare("SELECT * FROM images");
         $request->execute();
         $resultIm = $request->fetchAll(PDO::FETCH_ASSOC);
+        $request = $pdo->prepare("SELECT * FROM realisations_code");
+        $request->execute();
+        $resultReaCode = $request->fetchAll(PDO::FETCH_ASSOC);
+        $request = $pdo->prepare("SELECT * FROM realisations_graph");
+        $request->execute();
+        $resultReaGraph = $request->fetchAll(PDO::FETCH_ASSOC);
         require_once "../include/AffichageBdd.php"; ?>
 
-        <table class="table table-bordered">
+        <h2 class="h2_a">Messages du formulaire de contact</h2>
+        <table class="table table-bordered tableA">
             <thead class="thead-dark">
                 <tr>
                     <th>ID</th>
@@ -73,7 +71,9 @@ if($_COOKIE["passDash"] == "54a850jsp"){
             </tfoot>
         </table>
 
-        <table class="table table-bordered">
+        <h2 class="h2_a">Textes de l'accueil</h2>
+
+        <table class="table table-bordered tableA">
             <thead class="thead-dark">
                 <tr>
                     <th>ID</th>
@@ -99,7 +99,9 @@ if($_COOKIE["passDash"] == "54a850jsp"){
             </tfoot>
         </table>
 
-        <table class="table table-bordered">
+        <h2 class="h2_a">Réas de la page Home</h2>
+
+        <table class="table table-bordered tableA">
             <thead class="thead-dark">
                 <tr>
                     <th>ID</th>
@@ -115,6 +117,63 @@ if($_COOKIE["passDash"] == "54a850jsp"){
                     <?php AffichageBdd::affichageTableau($resultI); ?>
                     <td>
                         <a href="actionsbdd/modifIm.php?id=<?= /*à changer !!*/ $key ?>">
+                            M
+                        </a>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+        </table>
+
+        <h2 class="h2_a">Réas de code de la page Réalisations</h2>
+
+        <table class="table table-bordered tableA">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Lien img</th>
+                    <th>Lien Projet</th>
+                    <th>Modifier</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <?php foreach($resultReaCode as $resultRC): ?>
+                <tr>
+                    <?php AffichageBdd::affichageTableau($resultRC); ?>
+                    <td>
+                        <a href="actionsbdd/modifImRC.php?id=<?= /*à changer !!*/ $key ?>">
+                            M
+                        </a>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+        </table>
+
+        <h2 class="h2_a">Réas de graphisme de la page Réalisations</h2>
+
+        <table class="table table-bordered tableA">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Lien img</th>
+                    <th>Modifier</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <?php foreach($resultReaGraph as $resultRG): ?>
+                <tr>
+                    <?php AffichageBdd::affichageTableau($resultRG); ?>
+                    <td>
+                        <a href="actionsbdd/modifImRG.php?id=<?= /*à changer !!*/ $key ?>">
                             M
                         </a>
                     </td>

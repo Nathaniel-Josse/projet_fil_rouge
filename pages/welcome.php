@@ -1,3 +1,6 @@
+<?php
+if(!isset($_COOKIE["passDash"])){
+    ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,16 +16,7 @@
     <meta name="author" content="Nathaniel">
 </head>
 <body>
-    <header>
-        <img src="../asset/img/logotype_nathaniel_test.png" alt="logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="../index.php" title="accueil">ACCUEIL</a></li>
-                <li><a href="#" title="realisations">RÉALISATIONS</a></li>
-                <li><a href="contact.php" title="contact">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php require_once "../include/headerPages.php"; ?>
     <h1 class="co">Connexion</h1>
     <?php require_once "../include/admTraitement.php"; ?>
     <div class="formAdm">
@@ -42,3 +36,9 @@
     <p>© Nathaniel Josse - 2023 - </p>
     <p><a href="mleg.php" title="mentions legales">Mentions légales</a></p>
 </footer>
+
+<?php } else {
+    if($_COOKIE["passDash"] == "54a850jsp"){
+        header("location:dashboard.php");
+    }
+}

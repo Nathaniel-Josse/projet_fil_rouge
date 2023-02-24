@@ -13,16 +13,7 @@
     <meta name="author" content="Nathaniel">
 </head>
 <body>
-    <header>
-        <img src="../asset/img/logotype_nathaniel_test.png" alt="logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="../index.php" title="accueil">ACCUEIL</a></li>
-                <li><a href="realisations.php" title="realisations">RÉALISATIONS</a></li>
-                <li><a href="contact.php" title="contact">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php require_once "../include/headerPages.php"; ?>
     <h1 class="co">Contact</h1>
     <div class="formContainer">
         <form action="../include/traitementbdd.php" method="POST" id="formContact">
