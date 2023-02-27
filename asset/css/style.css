@@ -376,3 +376,25 @@ footer p a:active {
   margin: auto;
   text-align: center;
 }
+
+@media (max-width: 1070px) {
+  .title .dev {
+    font-family: helvetica_medium;
+    font-size: 150px;
+    color: rgba(0, 162, 154, 0.5019607843);
+    margin-left: 10px;
+  }
+  .title .web {
+    margin-left: 650px;
+  }
+  .selecHomeRea, .Rea1, .Rea2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .selecHomeRea img, .Rea1 img, .Rea2 img {
+    border: #000 1px solid;
+    margin-top: 40px;
+    width: 490px;
+    height: 284px;
+  }
+}

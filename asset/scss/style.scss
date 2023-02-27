@@ -379,3 +379,30 @@ footer{
     margin: auto;
     text-align: center;
 }
+
+
+// RWD //
+
+@media (max-width: 1070px){
+    .title{
+        .dev{
+            font-family:helvetica_medium;
+            font-size: 150px;
+            color:#00a29a80;
+            margin-left:10px;
+        }
+        .web{
+            margin-left: 650px;
+        }
+    }
+    .selecHomeRea{
+        display: flex;
+        flex-direction: column;
+        img{
+            border:#000 1px solid;
+            margin-top:40px;
+            width:490px;
+            height:284px;
+        }
+    }
+}

@@ -22,9 +22,9 @@ if(!isset($_COOKIE["passDash"])){
     <div class="formAdm">
         <form action="" method="POST" id="formAdm">
             <label for="user" class="form-label"> User : </label><br>
-            <input type="user" class="form-control" name="user" id="user" placeholder="Votre username"><br>
+            <input type="text" class="form-control" name="user" id="user" placeholder="Votre username"><br>
             <label for="mdp" class="form-label"> Mot de passe : </label><br>
-            <input type="mdp" class="form-control" name="mdp" id="mdp" placeholder="Votre mot de passe"><br>
+            <input type="password" class="form-control" name="mdp" id="mdp" placeholder="Votre mot de passe"><br>
             
             <input type="submit" name="submit" value="Se connecter">
         </form>
