@@ -57,12 +57,7 @@ if($_COOKIE["passDash"] == "54a850jsp"){
             <tbody>
                 <?php foreach($resultContact as $key => $resultC): ?>
                 <tr>
-                    <?php AffichageBdd::affichageTableau($resultC); ?>
-                    <td>
-                        <a href="actionsbdd/supprmess.php?id=<?= /*à changer !!*/ $key ?>">
-                            S
-                        </a>
-                    </td>
+                    <?php AffichageBdd::affichageTableauContact($resultC); ?>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -85,12 +80,7 @@ if($_COOKIE["passDash"] == "54a850jsp"){
             <tbody>
                 <?php foreach($resultText as $resultT): ?>
                 <tr>
-                    <?php AffichageBdd::affichageTableau($resultT); ?>
-                    <td>
-                        <a href="actionsbdd/modiftext.php?id=<?= /*à changer !!*/ $key ?>">
-                            M
-                        </a>
-                    </td>
+                    <?php AffichageBdd::affichageTableauTexte($resultT); ?>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -114,12 +104,7 @@ if($_COOKIE["passDash"] == "54a850jsp"){
             <tbody>
                 <?php foreach($resultIm as $resultI): ?>
                 <tr>
-                    <?php AffichageBdd::affichageTableau($resultI); ?>
-                    <td>
-                        <a href="actionsbdd/modifIm.php?id=<?= /*à changer !!*/ $key ?>">
-                            M
-                        </a>
-                    </td>
+                    <?php AffichageBdd::affichageTableauReaHome($resultI); ?>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -143,7 +128,7 @@ if($_COOKIE["passDash"] == "54a850jsp"){
             <tbody>
                 <?php foreach($resultReaCode as $resultRC): ?>
                 <tr>
-                    <?php AffichageBdd::affichageTableau($resultRC); ?>
+                    <?php AffichageBdd::affichageTableauReaCode($resultRC); ?>
                     <td>
                         <a href="actionsbdd/modifImRC.php?id=<?= /*à changer !!*/ $key ?>">
                             M
@@ -171,7 +156,7 @@ if($_COOKIE["passDash"] == "54a850jsp"){
             <tbody>
                 <?php foreach($resultReaGraph as $resultRG): ?>
                 <tr>
-                    <?php AffichageBdd::affichageTableau($resultRG); ?>
+                    <?php AffichageBdd::affichageTableauReaGraph($resultRG); ?>
                     <td>
                         <a href="actionsbdd/modifImRG.php?id=<?= /*à changer !!*/ $key ?>">
                             M
