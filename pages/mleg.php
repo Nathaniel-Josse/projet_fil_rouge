@@ -14,19 +14,31 @@
 </head>
 <body>
     <?php require_once "../include/headerPages.php"; ?>
-    <h2 class="mleg_p h2_mleg">MENTIONS LÉGALES</h2>
-    <p class="mleg_p">Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il est précisé aux utilisateurs du site njossedev.fr l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.</p>
-    <h3 class="mleg_p h3_mleg">Édition du site</h3>
-    <p class="mleg_p">Le présent site, accessible à l'URL https://www.njossedev.fr (le « Site »), est édité par :</p>
-    <p class="mleg_p">Nathaniel Josse, résidant 21 Allée des Platanes 94210 La Varenne Saint-Hilaire, de nationalité Française (France), né(e) le 16/07/2002.</p>
-    <h3 class="mleg_p h3_mleg">Hébergement</h3>
-    <p class="mleg_p">Le Site est hébergé par la société O2Switch, situé 222 Boulevard Gustave Flaubert, 63000 Clermont-Ferrand, (contact téléphonique ou email : (+33) 4 44 44 60 40).</p>
-    <h3 class="mleg_p h3_mleg">Directeur de publication</h3>
-    <p class="mleg_p">Le Directeur de la publication du Site est Nathaniel Josse.</p>
-    <h3 class="mleg_p h3_mleg">Me contacter</h3>
-    <p class="mleg_p">Par téléphone : +33 (0)6 45 00 20 63<br>
-    Par email : nathaniel.josse@gmail.com<br>
-    Par courrier : 21 Allée des Platanes 94210 La Varenne Saint-Hilaire</p>
+    <main aria-labelledby="titleMleg">
+        <h2 id="titleMleg" class="mleg_p h2_mleg">MENTIONS LÉGALES</h2>
+        <section>
+            <p class="mleg_p">Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il est précisé aux utilisateurs du site njossedev.fr l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.</p>
+            <article aria-labelledby="title1Mleg">
+                <h3 id="title1Mleg" class="mleg_p h3_mleg">Édition du site</h3>
+                <p class="mleg_p">Le présent site, accessible à l'URL https://www.njossedev.fr (le « Site »), est édité par :</p>
+                <p class="mleg_p">Nathaniel Josse, résidant 21 Allée des Platanes 94210 La Varenne Saint-Hilaire, de nationalité Française (France), né(e) le 16/07/2002.</p>
+            </article>
+            <article aria-labelledby="title2Mleg">
+                <h3 id="title2Mleg" class="mleg_p h3_mleg">Hébergement</h3>
+                <p class="mleg_p">Le Site est hébergé par la société O2Switch, situé 222 Boulevard Gustave Flaubert, 63000 Clermont-Ferrand, (contact téléphonique ou email : (+33) 4 44 44 60 40).</p>
+            </article>
+            <article aria-labelledby="title3Mleg">
+                <h3 id="title3Mleg" class="mleg_p h3_mleg">Directeur de publication</h3>
+                <p class="mleg_p">Le Directeur de la publication du Site est Nathaniel Josse.</p>
+            </article>
+            <article aria-labelledby="title4Mleg">
+                <h3 id="title4Mleg" class="mleg_p h3_mleg">Me contacter</h3>
+                <p class="mleg_p">Par téléphone : +33 (0)6 45 00 20 63<br>
+                Par email : nathaniel.josse@gmail.com<br>
+                Par courrier : 21 Allée des Platanes 94210 La Varenne Saint-Hilaire</p>
+            </article>
+        </section>
+    </main>
 
 
 </body>

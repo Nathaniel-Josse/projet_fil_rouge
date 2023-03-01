@@ -148,7 +148,7 @@ header{
     justify-content: center;
     align-items: center;
     margin-top:30px;
-    p{
+    h2{
         text-align: center;
         font-family: helvetica_medium;
         font-size:30px;
@@ -175,7 +175,7 @@ header{
     width:45%;
     height:60px;
     border-radius: 36px;
-    p{
+    h2{
         text-align: center;
         font-size: 25px;
         font-family: helvetica_medium;
@@ -323,6 +323,24 @@ footer{
     input{
         padding:10px;
     }
+    button{
+        border: 0;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+.rgpd{
+    background: #00A29B;
+    width:100%;
+    padding: 5px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    p{
+        margin-top: 10px;
+        color:#fff;
+        text-align: center;
+    }
 }
 
 // TraitementBdd.php
@@ -403,6 +421,12 @@ footer{
             margin-top:40px;
             width:490px;
             height:284px;
+        }
+    }
+    .Rea1,.Rea2{
+        @extend .selecHomeRea;
+        img{
+            background: #fff;
         }
     }
 }
