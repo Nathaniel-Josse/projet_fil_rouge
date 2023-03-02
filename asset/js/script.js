@@ -2,8 +2,6 @@
 
 let introDone = 0;
 let intro = document.getElementById("introLooped");
-$('body').addClass('stop-scrolling');
-$('body').bind('touchmove', function(e){e.preventDefault()});
 
 
 function changeToEndIntro() {
@@ -13,22 +11,44 @@ function changeToEndIntro() {
     intro.loop = false;
     intro.load();
     intro.play();
-    $('body').unbind('touchmove');
-    $('body').classList.remove("stop-scrolling");
 }
 
-function wait(ms){ // Fonction pour attendre
+/* function wait(ms){ // Fonction pour attendre, unused
     var start = new Date().getTime();
     var end = start;
     while(end < start + ms) {
       end = new Date().getTime();
    }
- }
+} */
 
-function stopIntro(){
+/* function stopIntro(){ // fonction qui avait pour but de gérer un délai, unused
     wait(5000);
     intro.pause(); // On pause la vidéo
     intro.getElementsByTagName('source')[0].src=''; // On vide la source
     /*intro.load();*/ // On recharge la vidéo vide pour l'actualiser
-    /* intro.classList.add("hidden"); */ // On ajoute la class hidden à la vidéo
-}
+    /* intro.classList.add("hidden"); // On ajoute la class hidden à la vidéo
+} */
+const scrollContainer = () => {
+    return document.documentElement; // Cet élément retourne l'élément html du document
+};
+
+const pageProgressBar = document.getElementById("progress-bar") //On récupère la progress bar par son id
+document.addEventListener("scroll", () => {
+  const pourcentageScroll =
+      (scrollContainer().scrollTop / (scrollContainer().scrollHeight - scrollContainer().clientHeight)) * 100; //On calcule le pourcentage de scroll
+      console.log(scrollContainer().scrollTop)
+  
+  pageProgressBar.style.width = `${pourcentageScroll}%` //On attribue ce pourcentage à la width de la progressBar
+});
+
+const divCopy = document.getElementById("shareCopy")
+divCopy.addEventListener("click", () => {
+    navigator.clipboard.writeText(window.location.href);
+    alert("Lien copié : " + window.location.href);
+})
+
+// Easter egg, si on clique sur la photo, on remonte au menu
+const photo = document.getElementById("photo") // on récupère l'élément
+photo.addEventListener("click", () => {
+    document.body.scrollIntoView({behavior: "smooth"}) // on scroll vers le haut de la page
+});

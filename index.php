@@ -13,6 +13,7 @@
     <meta name="author" content="Nathaniel">
 </head>
 <body>
+    <div id="progress-bar"></div>
     <?php
     require_once "include/connexionbdd.php";
     require_once "include/AffichageBdd.php";
@@ -26,12 +27,6 @@
     $request = $pdo->prepare("SELECT project_link FROM images");
     $request->execute();
     $resultImProj = $request->fetchAll(PDO::FETCH_ASSOC);
-    /* foreach ($result[0] as $key => $value) {
-        echo $key . "=>" . $value . "<br>";
-    }
-    foreach ($result[1] as $key => $value) {
-        echo $key . "=>" . $value . "<br>";
-    } */
 
     require_once "include/header.php"; ?>
     <section class="containerVideo">
@@ -42,7 +37,7 @@
     </section>
     <section class="containerStart">
         <div class="containerPhoto">
-            <img src="asset/img/n_josse.jpg" alt="photographie de Nathaniel Josse" class="imgProfil">
+            <img src="asset/img/n_josse.jpg" id="photo" alt="photographie de Nathaniel Josse" class="imgProfil">
         </div>
         <div class="rectanglePres">
             <p><?php AffichageBdd::affichage($resultText, 0);?><p>
@@ -98,6 +93,7 @@
             </section>
         </a>
     </section>
+    <div id="shareCopy"><p>Pour partager mon site, cliquez ici pour en copier le lien !</p></div>
     <script src="asset/js/script.js"></script>
 </body>
 

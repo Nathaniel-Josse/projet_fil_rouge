@@ -32,6 +32,14 @@ html, body { /* Permet de désactiver le scrolling horizontal en dégageant les 
 $link-color: #00a29b;
 $link-hover-color: #00746b;
 */
+
+#progress-bar {
+    height:20px;
+    background: #01d1bf;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
 header{
     display: flex;
     justify-content: space-around;
@@ -86,6 +94,7 @@ header{
             height: 250px;
             width: 250px;
             margin: 5px;
+            cursor:pointer;
         }
     }
     .rectanglePres{
@@ -257,6 +266,21 @@ header{
         }
     }
 
+}
+#shareCopy{
+    width:100%;
+    height:40px;
+    margin: 100px 0 10px 0;
+    color:#fff;
+    background: #00A29B;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    p{
+        margin-top: 15px;
+    }
 }
 footer{
     background: rgb(62, 62, 62);
