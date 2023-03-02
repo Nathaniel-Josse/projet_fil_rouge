@@ -4,7 +4,7 @@ require_once "../include/Affichagebdd.php";
 $request = $pdo->prepare("SELECT cookie FROM cookies");
 $request->execute();
 $resultCook = $request->fetchAll(PDO::FETCH_ASSOC);
-if(!isset($_COOKIE["passDash"])){
+if(!isset($_COOKIE["passDash"]) or (isset($_COOKIE["passDash"]) and $_COOKIE["passDash"] !== AffichageBdd::retour($resultCook, 0))){
     ?>
 <!DOCTYPE html>
 <html lang="fr">

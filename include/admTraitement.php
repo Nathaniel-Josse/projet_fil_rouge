@@ -16,10 +16,13 @@ if(isset($_POST['submit'])){
             $request = $pdo->prepare("SELECT mdp FROM adm");
             $request->execute();
             $verifMdp = $request->fetchAll(PDO::FETCH_ASSOC);
+            $request = $pdo->prepare("SELECT cookie FROM cookies");
+            $request->execute();
+            $resultCook = $request->fetchAll(PDO::FETCH_ASSOC);
 
             if(($_POST['user'] == AffichageBdd::retour($verifUser,0)) and ($password == AffichageBdd::retour($verifMdp,0))){
                 $_SESSION['admin'] = $_POST['user'];
-                setcookie($name = "passDash", $value="54a850jsp");
+                setcookie($name = "passDash", $value=AffichageBdd::retour($resultCook, 0));
                 echo "Yes";
                 header("Location:../pages/dashboard.php");
             } else {
