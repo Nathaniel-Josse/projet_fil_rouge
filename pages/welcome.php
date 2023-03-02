@@ -1,4 +1,9 @@
 <?php
+require_once "../include/connexionbdd.php";
+require_once "../include/Affichagebdd.php";
+$request = $pdo->prepare("SELECT cookie FROM cookies");
+$request->execute();
+$resultCook = $request->fetchAll(PDO::FETCH_ASSOC);
 if(!isset($_COOKIE["passDash"])){
     ?>
 <!DOCTYPE html>
@@ -38,7 +43,7 @@ if(!isset($_COOKIE["passDash"])){
 </footer>
 
 <?php } else {
-    if($_COOKIE["passDash"] == "54a850jsp"){
+    if($_COOKIE["passDash"] == AffichageBdd::retour($resultCook, 0)){
         header("location:dashboard.php");
     }
 }

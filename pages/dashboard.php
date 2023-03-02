@@ -1,5 +1,10 @@
 <?php
-if($_COOKIE["passDash"] == "54a850jsp"){
+require_once "../include/connexionbdd.php";
+require_once "../include/Affichagebdd.php";
+$request = $pdo->prepare("SELECT cookie FROM cookies");
+$request->execute();
+$resultCook = $request->fetchAll(PDO::FETCH_ASSOC);
+if($_COOKIE["passDash"] == AffichageBdd::retour($resultCook, 0)){
     session_start()
 
     ?>
@@ -23,7 +28,6 @@ if($_COOKIE["passDash"] == "54a850jsp"){
         <h1 class="co"><?= "Bonjour " . $_SESSION['admin'];?></h1>
 
         <?php
-        require_once "../include/connexionbdd.php";
         $request = $pdo->prepare("SELECT * FROM contact");
         $request->execute();
         $resultContact = $request->fetchAll(PDO::FETCH_ASSOC);
@@ -38,8 +42,7 @@ if($_COOKIE["passDash"] == "54a850jsp"){
         $resultReaCode = $request->fetchAll(PDO::FETCH_ASSOC);
         $request = $pdo->prepare("SELECT * FROM realisations_graph");
         $request->execute();
-        $resultReaGraph = $request->fetchAll(PDO::FETCH_ASSOC);
-        require_once "../include/AffichageBdd.php"; ?>
+        $resultReaGraph = $request->fetchAll(PDO::FETCH_ASSOC); ?>
 
         <h2 class="h2_a">Messages du formulaire de contact</h2>
         <table class="table table-bordered tableA">
