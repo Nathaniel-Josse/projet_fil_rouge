@@ -42,13 +42,26 @@ document.addEventListener("scroll", () => {
 });
 
 const divCopy = document.getElementById("shareCopy")
-divCopy.addEventListener("click", () => {
-    navigator.clipboard.writeText(window.location.href);
-    alert("Lien copié : " + window.location.href);
-})
+if(divCopy){
+    divCopy.addEventListener("click", () => {
+        navigator.clipboard.writeText(window.location.href);
+        alert("Lien copié : " + window.location.href);
+    })
+}
 
 // Easter egg, si on clique sur la photo, on remonte au menu
 const photo = document.getElementById("photo") // on récupère l'élément
-photo.addEventListener("click", () => {
-    document.body.scrollIntoView({behavior: "smooth"}) // on scroll vers le haut de la page
-});
+if(photo){ // on vérifie que l'élément existe
+    photo.addEventListener("click", () => {
+        document.body.scrollIntoView({behavior: "smooth"}) // on scroll vers le haut de la page
+    });
+}
+
+
+// Bouton du backoffice pour prendre le texte existant comme base pour le modifier
+const boutonBase = document.getElementById("baseTextArea")
+if (boutonBase){
+    boutonBase.addEventListener("click", () => {
+        document.getElementById("texttoupdate").value = document.getElementById("texttoupdate").placeholder
+    })
+}
