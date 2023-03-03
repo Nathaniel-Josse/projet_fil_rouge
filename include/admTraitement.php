@@ -25,8 +25,10 @@ if(isset($_POST['submit'])){
                 setcookie($name = "passDash", $value=AffichageBdd::retour($resultCook, 0));
                 echo "Yes";
                 header("Location:../pages/dashboard.php");
+                exit;
             } else {
                 header("Location:../index.php");
+                exit;
             }
 
         }

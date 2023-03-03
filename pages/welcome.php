@@ -45,5 +45,6 @@ if(!isset($_COOKIE["passDash"]) or (isset($_COOKIE["passDash"]) and $_COOKIE["pa
 <?php } else {
     if($_COOKIE["passDash"] == AffichageBdd::retour($resultCook, 0)){
         header("location:dashboard.php");
+        exit;
     }
 }

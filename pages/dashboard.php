@@ -132,11 +132,6 @@ if($_COOKIE["passDash"] == AffichageBdd::retour($resultCook, 0)){
                 <?php foreach($resultReaCode as $resultRC): ?>
                 <tr>
                     <?php AffichageBdd::affichageTableauReaCode($resultRC); ?>
-                    <td>
-                        <a href="actionsbdd/modifImRC.php?id=<?= /*à changer !!*/ $key ?>">
-                            M
-                        </a>
-                    </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -160,11 +155,6 @@ if($_COOKIE["passDash"] == AffichageBdd::retour($resultCook, 0)){
                 <?php foreach($resultReaGraph as $resultRG): ?>
                 <tr>
                     <?php AffichageBdd::affichageTableauReaGraph($resultRG); ?>
-                    <td>
-                        <a href="actionsbdd/modifImRG.php?id=<?= /*à changer !!*/ $key ?>">
-                            M
-                        </a>
-                    </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -183,4 +173,5 @@ if($_COOKIE["passDash"] == AffichageBdd::retour($resultCook, 0)){
 <?php
 } else {
     header("location:../index.php");
+    exit;
 }
