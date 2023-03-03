@@ -55,14 +55,12 @@ if($_COOKIE["passDash"] == AffichageBdd::retour($resultCook, 0)){
     <h1 class="mt-5 co">Modification de l'image n°<?= $id ?> sur la page d'Accueil ?</h1>
     <section class="ml-5 mr-5">
         <form action="" method="post">
-            <label for="texttoupdate" class="form-label">Lien de l'image que vous voulez modifier :</label><br>
+            <label for="linktoupdate" class="form-label">Lien de l'image que vous voulez modifier :</label><br>
             <textarea id="texttoupdate" placeholder="<?= $contenuImLien ?>" cols=50 rows=5 class="form-control" name="imLink"></textarea><br>
-            <label for="texttoupdate" class="form-label">Lien du projet GitHub que vous voulez modifier :</label><br>
+            <label for="projectlinktoupdate" class="form-label">Lien du projet GitHub que vous voulez modifier :</label><br>
             <textarea id="texttoupdate" placeholder="<?= $contenuImLienProjet ?>" cols=50 rows=5 class="form-control" name="projectLink"></textarea><br>
             <button type="submit" class="btn btn-success mr-1">Confirmer la modification</button>
             <a href="../dashboard.php" class="btn btn-danger">Annuler la modification</a>
         </form>
-        <button id="baseTextArea" class="btn btn-info mt-2">Utiliser les textes existants comme base</button>
     </section>
-    <script src="../../asset/js/script.js"></script>
 </body>

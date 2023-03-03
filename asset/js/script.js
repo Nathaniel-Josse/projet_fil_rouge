@@ -36,7 +36,7 @@ const pageProgressBar = document.getElementById("progress-bar") //On récupère 
 document.addEventListener("scroll", () => {
   const pourcentageScroll =
       (scrollContainer().scrollTop / (scrollContainer().scrollHeight - scrollContainer().clientHeight)) * 100; //On calcule le pourcentage de scroll
-      console.log(scrollContainer().scrollTop)
+      //console.log(scrollContainer().scrollTop)
   
   pageProgressBar.style.width = `${pourcentageScroll}%` //On attribue ce pourcentage à la width de la progressBar
 });
