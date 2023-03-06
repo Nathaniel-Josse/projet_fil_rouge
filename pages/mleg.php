@@ -21,7 +21,7 @@
             <article aria-labelledby="title1Mleg">
                 <h3 id="title1Mleg" class="mleg_p h3_mleg">Édition du site</h3>
                 <p class="mleg_p">Le présent site, accessible à l'URL https://www.njossedev.fr (le « Site »), est édité par :</p>
-                <p class="mleg_p">Nathaniel Josse, résidant 21 Allée des Platanes 94210 La Varenne Saint-Hilaire, de nationalité Française (France), né(e) le 16/07/2002.</p>
+                <p class="mleg_p">Nathaniel Josse.</p>
             </article>
             <article aria-labelledby="title2Mleg">
                 <h3 id="title2Mleg" class="mleg_p h3_mleg">Hébergement</h3>
@@ -33,9 +33,7 @@
             </article>
             <article aria-labelledby="title4Mleg">
                 <h3 id="title4Mleg" class="mleg_p h3_mleg">Me contacter</h3>
-                <p class="mleg_p">Par téléphone : +33 (0)6 45 00 20 63<br>
-                Par email : nathaniel.josse@gmail.com<br>
-                Par courrier : 21 Allée des Platanes 94210 La Varenne Saint-Hilaire</p>
+                <p class="mleg_p">Par email : nathaniel.josse@gmail.com</p>
             </article>
         </section>
     </main>
