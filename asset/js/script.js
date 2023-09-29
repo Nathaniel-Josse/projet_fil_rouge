@@ -49,13 +49,15 @@ if(divCopy){
     })
 }
 
-// Easter egg, si on clique sur la photo, on remonte au menu
+/*
+// Ancien easter egg, si on clique sur la photo, on remonte au menu. Enlevé car la photo est maintenant en haut du site. Ça n'a donc plus de sens.
 const photo = document.getElementById("photo") // on récupère l'élément
 if(photo){ // on vérifie que l'élément existe
     photo.addEventListener("click", () => {
         document.body.scrollIntoView({behavior: "smooth"}) // on scroll vers le haut de la page
     });
 }
+*/
 
 
 // Bouton du backoffice pour prendre le texte existant comme base pour le modifier

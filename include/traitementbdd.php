@@ -18,8 +18,8 @@
         <nav>
             <ul>
                 <li><a href="../index.php" title="accueil">ACCUEIL</a></li>
-                <li><a href="#" title="realisations">RÉALISATIONS</a></li>
-                <li><a href="pages/contact.php" title="contact">CONTACT</a></li>
+                <li><a href="../pages/realisations.php" title="realisations">RÉALISATIONS</a></li>
+                <li><a href="../pages/contact.php" title="contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
@@ -45,7 +45,7 @@ if($_POST && $_POST["objet"] && $_POST["message"] && $_POST["email"]){
 ?>
 </body>
 <footer>
-    <script src="asset/js/script.js"></script>
+    <script src="../asset/js/script.js"></script>
     <p>© Nathaniel Josse - 2023 - </p>
     <p><a href="pages/mleg.php" title="mentions legales">Mentions légales</a></p>
 </footer>

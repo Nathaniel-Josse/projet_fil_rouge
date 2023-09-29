@@ -101,7 +101,6 @@ header nav ul li a:active {
   height: 250px;
   width: 250px;
   margin: 5px;
-  cursor: pointer;
 }
 .containerStart .rectanglePres {
   background: #00A29B;
@@ -169,6 +168,10 @@ header nav ul li a:active {
   font-family: helvetica_medium;
   font-size: 30px;
   margin-top: 15px;
+}
+
+figure figcaption {
+  text-align: center;
 }
 
 .selecHomeRea, .Rea1, .Rea2 {
@@ -272,6 +275,14 @@ header nav ul li a:active {
   text-align: center;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.partners {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgba(1, 209, 192, 0.2901960784);
 }
 
 #shareCopy {

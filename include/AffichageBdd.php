@@ -35,7 +35,7 @@ class AffichageBdd {
             if ($key == "id_image"){
                 $idStock = $value; // On récupère l'id pour la dernière colonne
             }
-            if ($key == "project_link"){ //Si on est sur la dernière colonne
+            if ($key == "caption_home"){ //Si on est sur la dernière colonne
                 echo "<td><a href='actionsbdd/modifIm.php?id=" . $idStock . "'>M</a></td>"; //On ajoute la dernière colonne
             }
         }
@@ -46,7 +46,7 @@ class AffichageBdd {
             if ($key == "id_rea_code"){
                 $idStock = $value; // On récupère l'id pour la dernière colonne
             }
-            if ($key == "project_link_rea_code"){ //Si on est sur la dernière colonne
+            if ($key == "caption_rea_code"){ //Si on est sur la dernière colonne
                 echo "<td><a href='actionsbdd/modifImRC.php?id=" . $idStock . "'>M</a></td>"; //On ajoute la dernière colonne
             }
         }
@@ -57,7 +57,7 @@ class AffichageBdd {
             if ($key == "id_rea_graph"){
                 $idStock = $value; // On récupère l'id pour la dernière colonne
             }
-            if ($key == "link_rea_graph"){ //Si on est sur la dernière colonne
+            if ($key == "caption_rea_graph"){ //Si on est sur la dernière colonne
                 echo "<td><a href='actionsbdd/modifImRG.php?id=" . $idStock . "'>M</a></td>"; //On ajoute la dernière colonne
             }
         }

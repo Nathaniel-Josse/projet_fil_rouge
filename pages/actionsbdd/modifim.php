@@ -17,13 +17,25 @@ if($_COOKIE["passDash"] == AffichageBdd::retour($resultCook, 0)){
             $request->execute();
             $contenuIm = $request->fetchAll(PDO::FETCH_ASSOC);
             $contenuImLienProjet = AffichageBdd::retour($contenuIm, 0);
+            $request = $pdo->prepare("SELECT alt_home FROM images WHERE id_image = $id");
+            $request->execute();
+            $contenuIm = $request->fetchAll(PDO::FETCH_ASSOC);
+            $contenuImAlt = AffichageBdd::retour($contenuIm, 0);
+            $request = $pdo->prepare("SELECT caption_home FROM images WHERE id_image = $id");
+            $request->execute();
+            $contenuIm = $request->fetchAll(PDO::FETCH_ASSOC);
+            $contenuImCap = AffichageBdd::retour($contenuIm, 0);
             if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $imLink = $_POST['imLink'];
                 $projectLink = $_POST['projectLink'];
-                $modifText = "UPDATE images SET link = :imLink, project_link = :projectLink WHERE id_image = $id";
+                $alt = $_POST['alt'];
+                $cap = $_POST['cap'];
+                $modifText = "UPDATE images SET link = :imLink, project_link = :projectLink, alt_home = :alt, cap_home = :cap WHERE id_image = $id";
                 $prepRequete=$pdo->prepare($modifText);
                 $prepRequete->bindValue(":imLink", $imLink);
                 $prepRequete->bindValue(":projectLink", $projectLink);
+                $prepRequete->bindValue(":alt", $alt);
+                $prepRequete->bindValue(":cap", $cap);
                 $prepRequete->execute();
                 header("location:../dashboard.php");
                 exit;
@@ -56,9 +68,13 @@ if($_COOKIE["passDash"] == AffichageBdd::retour($resultCook, 0)){
     <section class="ml-5 mr-5">
         <form action="" method="post">
             <label for="linktoupdate" class="form-label">Lien de l'image que vous voulez modifier :</label><br>
-            <textarea id="texttoupdate" placeholder="<?= $contenuImLien ?>" cols=50 rows=5 class="form-control" name="imLink"></textarea><br>
+            <textarea id="linktoupdate" placeholder="<?= $contenuImLien ?>" cols=50 rows=5 class="form-control" name="imLink"></textarea><br>
             <label for="projectlinktoupdate" class="form-label">Lien du projet GitHub que vous voulez modifier :</label><br>
-            <textarea id="texttoupdate" placeholder="<?= $contenuImLienProjet ?>" cols=50 rows=5 class="form-control" name="projectLink"></textarea><br>
+            <textarea id="projectlinktoupdate" placeholder="<?= $contenuImLienProjet ?>" cols=50 rows=5 class="form-control" name="projectLink"></textarea><br>
+            <label for="alttoupdate" class="form-label">Alt que vous voulez modifier :</label><br>
+            <textarea id="alttoupdate" placeholder="<?= $contenuImAlt ?>" cols=50 rows=5 class="form-control" name="alt"></textarea><br>
+            <label for="captoupdate" class="form-label">Caption que vous voulez modifier :</label><br>
+            <textarea id="captoupdate" placeholder="<?= $contenuImCap ?>" cols=50 rows=5 class="form-control" name="cap"></textarea><br>
             <button type="submit" class="btn btn-success mr-1">Confirmer la modification</button>
             <a href="../dashboard.php" class="btn btn-danger">Annuler la modification</a>
         </form>

@@ -23,9 +23,21 @@
     $request = $pdo->prepare("SELECT project_link_rea_code FROM realisations_code");
     $request->execute();
     $resultReaCodeProj = $request->fetchAll(PDO::FETCH_ASSOC);
+    $request = $pdo->prepare("SELECT alt_rea_code FROM realisations_code");
+    $request->execute();
+    $resultReaCodeAlt = $request->fetchAll(PDO::FETCH_ASSOC);
+    $request = $pdo->prepare("SELECT caption_rea_code FROM realisations_code");
+    $request->execute();
+    $resultReaCodeCap = $request->fetchAll(PDO::FETCH_ASSOC);
     $request = $pdo->prepare("SELECT link_rea_graph FROM realisations_graph");
     $request->execute();
-    $resultReaGraphIm = $request->fetchAll(PDO::FETCH_ASSOC); ?>
+    $resultReaGraphIm = $request->fetchAll(PDO::FETCH_ASSOC);
+    $request = $pdo->prepare("SELECT alt_rea_graph FROM realisations_graph");
+    $request->execute();
+    $resultReaGraphAlt = $request->fetchAll(PDO::FETCH_ASSOC);
+    $request = $pdo->prepare("SELECT caption_rea_graph FROM realisations_graph");
+    $request->execute();
+    $resultReaGraphCap = $request->fetchAll(PDO::FETCH_ASSOC); ?>
     <main>
         <h1 class="co">Réalisations</h1>
         <section class="containerRea1">
@@ -34,20 +46,20 @@
             </div>
             <section class="Rea1">
             <?php if(!empty(AffichageBdd::retour($resultReaCodeProj, 0))){
-                echo "<a href=" . AffichageBdd::retour($resultReaCodeProj, 0) . " target='_blank'> <img src=" . AffichageBdd::retour($resultReaCodeIm, 0) . " alt='capture d'écran d'une réalisation' class='rea1Code'></a>";
-                } else {
-                    echo "<img src=" . AffichageBdd::retour($resultReaCodeIm, 0) . " alt='capture d'écran d'une réalisation' class='rea1Code'>";
-                }?>
+            echo "<figure><a href=" . AffichageBdd::retour($resultReaCodeProj, 0) . " target='_blank'><img src=" . AffichageBdd::retour($resultReaCodeIm, 0) . " alt=" . AffichageBdd::retour($resultReaCodeAlt, 0) . " class='rea1Home'></a><figcaption>" . AffichageBdd::retour($resultReaCodeCap, 0) . "</figcaption></figure>";
+            } else {
+                echo "<figure><img src=" . AffichageBdd::retour($resultReaCodeIm, 0) . " alt=" . AffichageBdd::retour($resultReaCodeAlt, 0) . " class='rea1Code'><figcaption>" . AffichageBdd::retour($resultReaCodeCap, 0) . "</figcaption></figure>";
+            }?>
             <?php if(!empty(AffichageBdd::retour($resultReaCodeProj, 1))){
-                echo "<a href=" . AffichageBdd::retour($resultReaCodeProj, 1) . " target='_blank'> <img src=" . AffichageBdd::retour($resultReaCodeIm, 1) . " alt='capture d'écran d'une réalisation' class='rea2Code'></a>";
-                } else {
-                    echo "<img src=" . AffichageBdd::retour($resultReaCodeIm, 1) . " alt='capture d'écran d'une réalisation' class='rea2Code'>";
-                }?>
+            echo "<figure><a href=" . AffichageBdd::retour($resultReaCodeProj, 1) . " target='_blank'><img src=" . AffichageBdd::retour($resultReaCodeIm, 1) . " alt=" . AffichageBdd::retour($resultReaCodeAlt, 1) . " class='rea2Code'></a><figcaption>" . AffichageBdd::retour($resultReaCodeCap, 1) . "</figcaption></figure>";
+            } else {
+                echo "<figure><img src=" . AffichageBdd::retour($resultReaCodeIm, 1) . " alt=" . AffichageBdd::retour($resultReaCodeAlt, 1) . " class='rea2Code'><figcaption>" . AffichageBdd::retour($resultReaCodeCap, 1) . "</figcaption></figure>";
+            }?>
             <?php if(!empty(AffichageBdd::retour($resultReaCodeProj, 2))){
-                echo "<a href=" . AffichageBdd::retour($resultReaCodeProj, 2) . " target='_blank'> <img src=" . AffichageBdd::retour($resultReaCodeIm, 2) . " alt='capture d'écran d'une réalisation' class='rea3Code'></a>";
-                } else {
-                    echo "<img src=" . AffichageBdd::retour($resultReaCodeIm, 2) . " alt='capture d'écran d'une réalisation' class='rea3Code'>";
-                }?>
+            echo "<figure><a href=" . AffichageBdd::retour($resultReaCodeProj, 2) . " target='_blank'><img src=" . AffichageBdd::retour($resultReaCodeIm, 2) . " alt=" . AffichageBdd::retour($resultReaCodeAlt, 2) . " class='rea3Code'></a><figcaption>" . AffichageBdd::retour($resultReaCodeCap, 2) . "</figcaption></figure>";
+            } else {
+                echo "<figure><img src=" . AffichageBdd::retour($resultReaCodeIm, 2) . " alt=" . AffichageBdd::retour($resultReaCodeAlt, 2) . " class='rea3Code'><figcaption>" . AffichageBdd::retour($resultReaCodeCap, 2) . "</figcaption></figure>";
+            }?>
             </section>
         </section>
         <section class="containerRea2">
@@ -55,15 +67,15 @@
                 <h2>Graphique (Reproductions de Pixel Arts)</h2>
             </div>
             <section class="Rea2">
-                <?php echo "<img src=" . AffichageBdd::retour($resultReaGraphIm, 0) . " alt='capture d'écran d'une réalisation' class='rea1Graph'>"; ?>
-                <?php echo "<img src=" . AffichageBdd::retour($resultReaGraphIm, 1) . " alt='capture d'écran d'une réalisation' class='rea2Graph'>"; ?>
-                <?php echo "<img src=" . AffichageBdd::retour($resultReaGraphIm, 2) . " alt='capture d'écran d'une réalisation' class='rea3Graph'>"; ?>
+                <?php echo "<figure><img src=" . AffichageBdd::retour($resultReaGraphIm, 0) . " alt=" . AffichageBdd::retour($resultReaGraphAlt, 0) . " class='rea1Graph'><figcaption>" . AffichageBdd::retour($resultReaGraphCap, 0) . "</figcaption></figure>"; ?>
+                <?php echo "<figure><img src=" . AffichageBdd::retour($resultReaGraphIm, 1) . " alt=" . AffichageBdd::retour($resultReaGraphAlt, 1) . " class='rea2Graph'><figcaption>" . AffichageBdd::retour($resultReaGraphCap, 1) . "</figcaption></figure>"; ?>
+                <?php echo "<figure><img src=" . AffichageBdd::retour($resultReaGraphIm, 2) . " alt=" . AffichageBdd::retour($resultReaGraphAlt, 2) . " class='rea3Graph'><figcaption>" . AffichageBdd::retour($resultReaGraphCap, 2) . "</figcaption></figure>"; ?>
             </section>
         </section>
     </main>
 </body>
 <footer>
-    <script src="asset/js/script.js"></script>
+    <script src="../asset/js/script.js"></script>
     <p>© Nathaniel Josse - 2023 - </p>
     <p><a href="mleg.php" title="mentions legales">Mentions légales</a></p>
 </footer>

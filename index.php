@@ -27,14 +27,31 @@
     $request = $pdo->prepare("SELECT project_link FROM images");
     $request->execute();
     $resultImProj = $request->fetchAll(PDO::FETCH_ASSOC);
+    $request = $pdo->prepare("SELECT alt_home FROM images");
+    $request->execute();
+    $resultImAlt = $request->fetchAll(PDO::FETCH_ASSOC);
+    $request = $pdo->prepare("SELECT caption_home FROM images");
+    $request->execute();
+    $resultImCap = $request->fetchAll(PDO::FETCH_ASSOC);
+    $request = $pdo->prepare("SELECT logo_partner FROM partners");
+    $request->execute();
+    $resultLogoPart = $request->fetchAll(PDO::FETCH_ASSOC);
+    $request = $pdo->prepare("SELECT alt_partner FROM partners");
+    $request->execute();
+    $resultAltPart = $request->fetchAll(PDO::FETCH_ASSOC);
+    $request = $pdo->prepare("SELECT link_partner FROM partners");
+    $request->execute();
+    $resultLinkPart = $request->fetchAll(PDO::FETCH_ASSOC);
 
     require_once "include/header.php"; ?>
+    <!--
     <section class="containerVideo">
         <video width="1920" height="1080" id="introLooped"  onclick="changeToEndIntro()" autoplay muted loop aria-label="vidéo introductive incitant à descendre plus bas sur le site">
             <source src="asset/medias/logo_animation loop_final_fr.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la balise video.
         </video>
     </section>
+    -->
     <section class="containerStart">
         <div class="containerPhoto">
             <img src="asset/img/n_josse.jpg" id="photo" alt="photographie de Nathaniel Josse" class="imgProfil">
@@ -55,19 +72,19 @@
     </div>
     <section class="selecHomeRea">
         <?php if(!empty(AffichageBdd::retour($resultImProj, 0))){
-            echo "<a href=" . AffichageBdd::retour($resultImProj, 0) . " target='_blank'> <img src=" . AffichageBdd::retour($resultIm, 0) . " alt='capture d'écran d'une première réalisation' class='rea1Home'></a>";
+            echo "<figure><a href=" . AffichageBdd::retour($resultImProj, 0) . " target='_blank'><img src=" . AffichageBdd::retour($resultIm, 0) . " alt=" . AffichageBdd::retour($resultImAlt, 0) . " class='rea1Home'></a><figcaption>" . AffichageBdd::retour($resultImCap, 0) . "</figcaption></figure>";
             } else {
-                echo "<img src=" . AffichageBdd::retour($resultIm, 0) . " alt='capture d'écran d'une première réalisation' class='rea1Home'>";
+                echo "<figure><img src=" . AffichageBdd::retour($resultIm, 0) . " alt=" . AffichageBdd::retour($resultImAlt, 0) . " class='rea1Home'><figcaption>" . AffichageBdd::retour($resultImCap, 0) . "</figcaption></figure>";
             }?>
         <?php if(!empty(AffichageBdd::retour($resultImProj, 1))){
-            echo "<a href=" . AffichageBdd::retour($resultImProj, 1) . " target='_blank'> <img src=" . AffichageBdd::retour($resultIm, 1) . " alt='capture d'écran d'une deuxième réalisation' class='rea2Home'></a>";
+            echo "<figure><a href=" . AffichageBdd::retour($resultImProj, 1) . " target='_blank'><img src=" . AffichageBdd::retour($resultIm, 1) . " alt=" . AffichageBdd::retour($resultImAlt, 1) . " class='rea2Home'></a><figcaption>" . AffichageBdd::retour($resultImCap, 1) . "</figcaption></figure>";
             } else {
-                echo "<img src=" . AffichageBdd::retour($resultIm, 1) . " alt='capture d'écran d'une deuxième réalisation' class='rea2Home'>";
+                echo "<figure><img src=" . AffichageBdd::retour($resultIm, 1) . " alt=" . AffichageBdd::retour($resultImAlt, 1) . " class='rea2Home'><figcaption>" . AffichageBdd::retour($resultImCap, 1) . "</figcaption></figure>";
             }?>
         <?php if(!empty(AffichageBdd::retour($resultImProj, 2))){
-            echo "<a href=" . AffichageBdd::retour($resultImProj, 2) . " target='_blank'> <img src=" . AffichageBdd::retour($resultIm, 2) . " alt='capture d'écran d'une troisième réalisation' class='rea3Home'></a>";
+            echo "<figure><a href=" . AffichageBdd::retour($resultImProj, 2) . " target='_blank'><img src=" . AffichageBdd::retour($resultIm, 2) . " alt=" . AffichageBdd::retour($resultImAlt, 2) . " class='rea3Home'></a><figcaption>" . AffichageBdd::retour($resultImCap, 2) . "</figcaption></figure>";
             } else {
-                echo "<img src=" . AffichageBdd::retour($resultIm, 2) . " alt='capture d'écran d'une troisième réalisation' class='rea3Home'>";
+                echo "<figure><img src=" . AffichageBdd::retour($resultIm, 2) . " alt=" . AffichageBdd::retour($resultImAlt, 2) . " class='rea3Home'><figcaption>" . AffichageBdd::retour($resultImCap, 2) . "</figcaption></figure>";
             }?>
     </section>
     <section class="knowMoreTitle">
@@ -92,6 +109,12 @@
                 <p>Pour m’envoyer un message directement sur une page de Contact dédiée.</p>
             </section>
         </a>
+    </section>
+    <section class="knowMoreTitle">
+        <h2>Ils m'ont déjà fait confiance. Pourquoi pas vous ?</h2>
+    </section>
+    <section class="partners">
+        <?php echo "<a href='" . AffichageBdd::retour($resultLinkPart, 0) . "'><img src=" . AffichageBdd::retour($resultLogoPart, 0) . " alt='" . AffichageBdd::retour($resultAltPart, 0) . "' class='part1Home' height='100px'></a>" ?>
     </section>
     <div id="shareCopy"><p>Pour partager mon site, cliquez ici pour en copier le lien !</p></div>
     <script src="asset/js/script.js"></script>
