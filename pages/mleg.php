@@ -33,7 +33,7 @@
             </article>
             <article aria-labelledby="title4Mleg">
                 <h3 id="title4Mleg" class="mleg_p h3_mleg">Me contacter</h3>
-                <p class="mleg_p">Par email : nathaniel.josse@gmail.com</p>
+                <p class="mleg_p">Par email : nathaniel.josse[arobase]gmail.com</p>
             </article>
         </section>
     </main>
