@@ -16,7 +16,7 @@
     <?php
     require_once "../include/headerPages.php";
     require_once "../include/connexionbdd.php";
-    require_once "../include/Affichagebdd.php";
+    require_once "../include/AffichageBdd.php";
     $request = $pdo->prepare("SELECT link_rea_code FROM realisations_code");
     $request->execute();
     $resultReaCodeIm = $request->fetchAll(PDO::FETCH_ASSOC);
